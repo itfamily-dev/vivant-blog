@@ -1,0 +1,132 @@
+.contact {
+	text-align: center;
+
+	&__title {
+		font-weight: 200;
+		font-size: 48px;
+		line-height: 56px;
+
+		@include breakpoint($to: mobile) {
+			font-size: 38px;
+			line-height: 46px;
+        }
+	}
+
+
+	&__form {
+		position: relative;
+		display: grid;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 32px;
+		padding: 35px 0;
+
+		@include breakpoint($to: mobile) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 15px;
+        }
+
+
+		/* general options for all forms */
+		input:not([type="submit"]), select, textarea {
+			border: 1px solid rgba(get_color(dark), 0.15);
+			border-radius: 200px;
+			color: rgba(get_color(dark), 0.6);
+			width: 100%;
+			font-size: 16px;
+			line-height: 24px;
+			padding: 16px 24px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		select {
+			position: relative;
+			-moz-appearance:none;
+		    -webkit-appearance:none;
+		    appearance:none;
+		}
+
+
+		::placeholder {
+			color: rgba(get_color(dark), 0.6);
+			opacity: 1;
+		}
+
+		:-ms-input-placeholder {
+			color: rgba(get_color(dark), 0.6);
+		}
+
+		::-ms-input-placeholder {
+			color: rgba(get_color(dark), 0.6);
+		}
+
+		&-submit {
+			max-width: 80px;
+			width: 100%;
+			grid-column-end: -1;
+			justify-self: end;
+		}
+
+		&__field--select {
+			position: relative;
+
+				&:after,
+				&:before {
+					-webkit-transition: bottom .3s linear .3s,-webkit-transform .3s linear;
+					transition: bottom .3s linear .3s,-webkit-transform .3s linear;
+					transition: bottom .3s linear .3s,transform .3s linear;
+					transition: bottom .3s linear .3s,transform .3s linear,-webkit-transform .3s linear;
+					background-color: rgba(get_color(dark), 0.6);
+					height: 2px;
+					top: 50%;
+					width: 9px;
+					content: "";
+					display: block;
+					position: absolute;
+					z-index: 5;
+				}
+
+				&:after {
+				    -webkit-transform: rotate(135deg);
+					transform: rotate(135deg);
+					right: 25px;
+				}
+
+				&:before {
+					-webkit-transform: rotate(45deg);
+					transform: rotate(45deg);
+					right: 31px;
+				}
+		}
+
+		&__field--textarea {
+			grid-column-start: 1;
+			grid-column-end: 3;
+
+			textarea {
+				border-radius: 16px;
+				min-height: 200px;
+
+				&::placeholder {
+					color: rgba(get_color(dark), 0.3);
+					opacity: 1;
+				}
+
+				&:-ms-input-placeholder {
+					color: rgba(get_color(dark), 0.3);
+				}
+
+				&::-ms-input-placeholder {
+					color: rgba(get_color(dark), 0.3);
+				}
+
+			}
+		}
+	}
+}

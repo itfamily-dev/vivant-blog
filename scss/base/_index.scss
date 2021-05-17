@@ -1,0 +1,29 @@
+/**
+ * Base
+ */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-overflow-scrolling: touch;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+@import './font';
+@import './typography';
+@import './wp-default';
+@import './grid';
+@import './helpers';

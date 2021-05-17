@@ -1,0 +1,35 @@
+.small-cards {
+    list-style: none;
+    padding: 0;
+}
+
+.small-card {
+    background: rgba(255,255,255, 0.03);
+    border-radius: 24px;
+    padding: $component_margin*1.5;
+
+    &:not(:last-child) {
+        margin-bottom: $component_margin;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 200;
+        margin-bottom: 0;
+        @include breakpoint(desktop) {
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 28px;
+
+        @include breakpoint(desktop) {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+}

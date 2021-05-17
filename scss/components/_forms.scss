@@ -1,0 +1,225 @@
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
+}
+
+%form-element {
+	display: block;
+	overflow: visible;
+	width: 100%;
+	padding: 10px 15px;
+	border: 0;
+	outline: none;
+	border: 1px solid get_color( 'grey-100' );
+
+	@include placeholder-color( get_color( 'body_text' ) );
+}
+
+
+/* Chrome orange autofill color override */
+.am2-form {
+	margin-bottom: $component_margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__field-icon {
+		position: absolute;
+		right: 0;
+		bottom: 10px;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		background: get_color( 'grey-100' );
+		border: 1px solid get_color( 'grey-100' );
+		border-bottom-color: darken( get_color( 'grey-100' ), 10% );
+		border-bottom-width: 2px;
+
+		&--left {
+			right: auto;
+			left: 0;
+		}
+	}
+
+	&__input {
+		@extend %form-element;
+
+		&::-webkit-file-upload-button {
+			padding: 8px 15px;
+			border: 1px solid get_color( 'grey-100' );
+			background-color: get_color( 'grey-100' );
+			position: relative;
+			left: -10px;
+		}
+
+		&:disabled {
+			color: rgba( get_color( 'grey-100' ), .3 );
+			background: get_color( 'grey-100' );
+			box-shadow: none;
+		}
+
+		&--has-left-icon {
+			padding-left: 40px + $component_margin;
+		}
+
+		&--has-right-icon {
+			padding-right: 40px + $component_margin;
+		}
+
+		&-row {
+			position: relative;
+		}
+	}
+
+	&__required {
+		color: get_color( 'danger' );
+		vertical-align: super;
+		font-size: smaller;
+	}
+
+	&__field-description {
+		vertical-align: super;
+		font-size: smaller;
+	}
+
+	&__row {
+		position: relative;
+		margin-bottom: $component_margin;
+
+		@include breakpoint( 'mobile' ) {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__column {
+		position: relative;
+
+		@include breakpoint( 'mobile' ) {
+			flex-basis: auto;
+			width: auto;
+			flex: 0 0 48%;
+			max-width: 48%;
+			margin-bottom: 0!important;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+
+	textarea {
+		@extend %form-element;
+			height: 302px;
+
+		@include breakpoint( 'mobile' ) {
+			height: 130px;
+		}
+	}
+
+	input:focus,
+	input:active,
+	textarea:focus,
+	textarea:active {
+		border-bottom-color: get_color( 'primary' );
+	}
+
+	label {
+		cursor: pointer;
+		display: inline-block;
+		margin-bottom: $component_margin / 2;
+
+		&[data-error] {
+			display: block;
+			height: 0px;
+		}
+	}
+
+	input[type='checkbox'] {
+		display: none;
+	}
+
+	input[type='checkbox'] + label {
+		margin-left: 25px;
+	}
+
+	input[type='checkbox'] + label::after {
+		content: '✔';
+		cursor: pointer;
+		position: absolute;
+		width: 9px;
+		height: 5px;
+		opacity: 0;
+		background: transparent;
+		top: 0px;
+		left: 3px;
+		color: get_color( 'grey-100' );
+		transform: scale(0);
+	}
+
+	input[type='checkbox']:checked + label::after {
+		opacity: 1;
+		color: get_color( 'dark' );
+		transform: scale(1);
+	}
+
+	input[type='checkbox'] + label::before {
+		content: '';
+		cursor: pointer;
+		position: absolute;
+		width: 17px;
+		height: 17px;
+		top: 0;
+		left: 0;
+		border: 2px solid get_color( 'grey-100' );
+	}
+
+	input[type='radio'] {
+		display: none;
+	}
+
+	input[type='radio'] + label {
+		margin-left: 25px;
+	}
+
+	input[type='radio'] + label::after {
+		content: '';
+		cursor: pointer;
+		opacity: 0;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		background: get_color( 'grey-100' );
+		top: 4px;
+		left: 4px;
+		border-radius: 50%;
+		transform: scale(0);
+	}
+
+	input[type='radio']:checked + label::after {
+		opacity: 1;
+		background: get_color( 'dark' );
+		transform: scale(1);
+	}
+
+	input[type='radio'] + label::before {
+		content: '';
+		cursor: pointer;
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		top: 0;
+		left: 0;
+		border: 2px solid get_color( 'grey-100' );
+		border-radius: 50%;
+	}
+}

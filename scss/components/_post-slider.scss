@@ -1,0 +1,96 @@
+.post-slider {
+    position: relative;
+
+    .post-item__image {
+
+        img {
+            @media (max-width: 480px) {
+                height: 256px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: $component_margin*1.5 0;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 28px;
+        text-decoration: underline;
+        color: get_color(dark);
+        white-space: nowrap;
+        opacity: 0.6;
+        text-transform: capitalize;
+        margin-right: $component_margin*2;
+
+        @include breakpoint($to: small) {
+            margin-right: 0;
+            margin-left: $component_margin
+        }
+    }
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        background: rgba(11, 11, 11, 0.05);
+        border: 1px solid #fff;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        margin-top: 0;
+        transform: none;
+        z-index: 500;
+        transition: 0.2s ease-in-out;
+        font-weight: bold;
+
+        @include breakpoint($to: small) {
+            right: auto;
+            left: 24px;
+        }
+
+
+        @include breakpoint($to: small) {
+            display: none;
+        }
+
+        &:after {
+            font-size: 14px;
+            color: rgba(11, 11, 11, 1);
+            position: relative;
+            font-weight: bold;
+            left: -1px;
+        }
+
+        &:hover {
+            background: rgba(11, 11, 11, 0.6);
+        }
+    }
+
+    .swiper-button-next {
+        right: 40px;
+
+        @include breakpoint($to: small) {
+            right: auto;
+            left: 80px;
+        }
+
+        &:after {
+            left: auto;
+            right: -2px;
+        }
+    }
+}

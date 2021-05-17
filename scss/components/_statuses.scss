@@ -1,0 +1,127 @@
+.status {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	background-image: none;
+	white-space: nowrap;
+	user-select: none;
+	line-height: 16px;
+	border-radius: 3px;
+
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		margin-right: 8px;
+		overflow: hidden;
+		background: get_color(dark);
+		vertical-align: middle;
+	}
+
+	&__primary {
+		&::before {
+			background: get_color(primary);
+		}
+	}
+
+	&__secondary {
+		&::before {
+			background: get_color(secondary);
+		}
+	}
+
+	&__featured {
+		&::before {
+			background: get_color(featured);
+		}
+	}
+
+	&__transparent {
+		&::before {
+			background: transparent;
+		}
+	}
+
+	&__danger {
+		&::before {
+			background: get_color(danger);
+		}
+	}
+
+	&__new {
+		&::before {
+			background: #F1E41E;
+		}
+	}
+
+	&__in-progress {
+		&::before {
+			background: #67E6E7;
+		}
+	}
+
+	&__done {
+		&::before {
+			background: #ADE358;
+		}
+	}
+
+	&__received {
+		&::before {
+			background: #A15BAE;
+		}
+	}
+
+	&__at-engravers {
+		&::before {
+			background: #AEAEAE;
+		}
+	}
+
+	&__shipping {
+		&::before {
+			background: #F19D1A;
+		}
+	}
+
+	&__completed {
+		&::before {
+			background: #ADE358;
+		}
+	}
+
+	&__canceled {
+		&::before {
+			background: #DE3524;
+		}
+	}
+
+	&__invoice-pending {
+		&::before {
+			background: #F19D1A;
+		}
+	}
+
+	&__closed {
+		&::before {
+			background: #AEAEAE;
+		}
+	}
+
+	&__paid {
+		&::before {
+			background: #67A6E7;
+		}
+	}
+
+	&__full-width {
+		width: 100%;
+	}
+
+}

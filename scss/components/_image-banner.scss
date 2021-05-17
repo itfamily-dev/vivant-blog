@@ -1,0 +1,46 @@
+.image-banner {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.4);
+        border-radius: 16px;
+        z-index: 10;;
+
+        @include breakpoint(mobile) {
+            border-radius: 32px;
+        }
+    }
+
+    &--gradient {
+
+        &:after {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        }
+    }
+
+    &__info {
+        left: 0;
+        right: 0;
+        position: absolute;
+        top: 50%;
+        transform: translate3d(0,-50%,0);
+        color: #fff;
+        z-index: 20;
+        text-align: center;
+
+        h2,p {
+            display: none;
+
+            @include breakpoint(mobile) {
+                display: block;
+            }
+        }
+
+    }
+}

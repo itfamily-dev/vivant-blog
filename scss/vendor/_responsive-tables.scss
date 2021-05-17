@@ -1,0 +1,80 @@
+/*** Responsive Tables ***/
+
+@include breakpoint(mobile) {
+
+  .js-responsive-table {
+    margin-bottom: 0;
+  }
+
+  .pinned {
+    background: #FFFFFF;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    left: 0;
+    overflow-x: scroll;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 150px;
+  }
+
+  .pinned {
+
+    table {
+      border-left: 0;
+      border-right: 0;
+      width: 100%;
+
+      th,
+      td {
+        white-space: nowrap;
+      }
+    }
+
+
+    td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+
+
+  .table-wrapper {
+    border-right: 1px solid #CCCCCC;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+
+    div.scrollable {
+      margin-left: 150px;
+    }
+
+    div.scrollable {
+      overflow-y: hidden;
+      overflow: scroll;
+    }
+
+  }
+
+
+  .js-responsive-table {
+    td,
+    th {
+      overflow: hidden;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    th:first-child,
+    td:first-child,
+    td:first-child,
+    &.pinned {
+      td {
+        display: none;
+      }
+    }
+  }
+
+
+
+}

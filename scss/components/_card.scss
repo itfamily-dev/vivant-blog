@@ -1,0 +1,41 @@
+.card {
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+    height: 100%;
+
+    &__info {
+        padding: $component_margin*1.5;
+        @include breakpoint(desktop) {
+            padding: 56px;
+        }
+    }
+
+    &__text  {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: $component_margin*2;
+
+        @include breakpoint(desktop) {
+            font-size: 18px;
+            line-height: 28px;;
+        }
+
+        &:last-child {
+            margin-bottom: 0;;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: $component_margin/2;
+
+        @include breakpoint(desktop) {
+            margin-bottom: $component_margin;
+            font-size: 36px;
+            line-height: 44px;;
+        }
+    }
+
+}

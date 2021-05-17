@@ -1,0 +1,6 @@
+// Used to retrieve colors from variables/colors
+// example : get_color(brand);
+
+@function get_color($color_name: default) {
+  @return map-get($colors, $color_name);
+}

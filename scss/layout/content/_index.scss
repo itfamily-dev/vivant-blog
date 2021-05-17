@@ -1,0 +1,47 @@
+@import './block';
+@import './sidebar';
+@import './containers';
+
+.content {
+    padding: $component_margin*1.5 0;
+
+    @include breakpoint(mobile) {
+        padding: 40px 0;
+    }
+
+    @include breakpoint(desktop) {
+        padding: $component_margin*4 0;
+    }
+
+    &--single {
+        padding: 0;
+    }
+
+    &--dark {
+        background: get_color( 'grey-300' );
+        color: #fff;
+
+        .big-p {
+            opacity: 0.7;
+        }
+
+        p {
+            margin-bottom: 48px;
+            @include breakpoint($to: desktop) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &.help {
+
+        @include breakpoint(desktop) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &--for-wine {
+        padding-top: 0;
+    }
+}

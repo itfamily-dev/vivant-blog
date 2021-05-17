@@ -1,0 +1,71 @@
+.page-template-template-join-us {
+
+    .join-us {
+
+        &-block {
+
+            &--how-we-work {
+                position: relative;
+
+                .wrapper {
+                    position: relative;
+                    z-index: 10;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 26vw;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: get_color(dark);
+                    z-index: 1;
+
+                    @include breakpoint(large) {
+                        top: 28%;
+                    }
+                }
+            }
+
+            &--diversity {
+                position: relative;
+
+                .wrapper {
+                    position: relative;
+                    z-index: 100;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 26vw;
+                    background-color: get_color(dark);
+                    z-index: 1;
+
+                    @include breakpoint(large) {
+                       height: 32%;
+                    }
+                }
+            }
+
+            &--posts {
+                > .wrapper {
+                    padding-top: 60px;
+                    border-top: 1px solid rgba(get_color(dark), 0.1);
+                    border-bottom: 1px solid rgba(get_color(dark), 0.1);
+                    padding-bottom: 80px;
+
+                    @include breakpoint($to: desktop) {
+                        border: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

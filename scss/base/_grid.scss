@@ -1,0 +1,105 @@
+.wp-block-group__inner-container,
+.wrapper {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding-right: 24px;
+	padding-left: 24px;
+
+	@include breakpoint(mobile) {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
+	@include breakpoint(desktop) {
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+
+	&--full {
+		max-width: 1760px;
+	}
+
+	&--contact {
+		max-width: 894px;
+	}
+
+	&--large {
+		max-width: 1472px;
+	}
+
+	&--large-v1 {
+		max-width: 1244px;
+	}
+
+	&--narrow {
+		max-width: $grid_content_narrow;
+	}
+
+	&--narrow-v1 {
+		max-width: 890px;
+	}
+	&--content {
+		max-width: 1088px;
+	}
+
+	&--narrower {
+		max-width: 890px;
+	}
+
+	.wrapper & {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: - $grid_spacing;
+	margin-right: - $grid_spacing;
+
+	&:not(:last-of-type) {
+		margin-bottom: $grid_spacing;
+	}
+
+	.columns & {
+		margin-left: - $grid_spacing;
+		margin-right: - $grid_spacing;
+	}
+
+	@each $breakpoint, $size in $breakpoints {
+		&--break-#{$breakpoint} {
+
+		@include breakpoint($to: #{$breakpoint}) {
+				flex-direction: column;
+
+				> .col {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.col {
+	position: relative;
+    flex-basis: 0;
+	flex-grow: 1;
+	padding: $grid_spacing;
+	width: 100%;
+	max-width: 100%;
+
+	&--auto {
+		flex: 0 0 auto;
+    	width: auto;
+	}
+
+	// 12 col grid
+	@for $i from 1 through 12 {
+		&-#{$i} {
+			flex: calc((#{$i} / 12) * 100%);
+			max-width: calc((#{$i} / 12) * 100%);
+		}
+	}
+}

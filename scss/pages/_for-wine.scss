@@ -1,0 +1,104 @@
+.page-template-template-for-wine {
+    background: #fff;
+
+    .content {
+        padding-top: $component_margin*1.5;
+
+        @include breakpoint(small) {
+            padding-top: 40px;
+        }
+
+        @include breakpoint(desktop) {
+            padding-top: $component_margin*4
+        }
+    }
+
+    .for-wine {
+
+        &__intro {
+            position: relative;
+
+            &-mask {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom:  0;
+                z-index: 1;
+            }
+
+            &-image {
+                display: block;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+
+        &--why,
+        &--how {
+            position: relative;
+            padding-bottom: 80px;
+
+            .wrapper {
+                position: relative;
+                z-index: 10;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 34vw;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: get_color(dark);
+                z-index: 1;
+
+                @include breakpoint(large) {
+                    top: 25%;
+                }
+            }
+        }
+
+        &--who {
+            position: relative;
+
+                .wrapper {
+                    position: relative;
+                    z-index: 100;
+                }
+
+                p {
+
+                    @include breakpoint(desktop) {
+                        margin-bottom: $component_margin*2.5;
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 26vw;
+                    background-color: get_color(dark);
+                    z-index: 1;
+
+                    @include breakpoint(large) {
+                       height: 32%;
+                    }
+                }
+        }
+
+        &--how,
+        &--why {
+
+            @include breakpoint(mobile,desktop) {
+                h2,.big-p,.custom-list,.ctas__item {
+                    padding-left: 88px;
+                }
+            }
+        }
+    }
+}

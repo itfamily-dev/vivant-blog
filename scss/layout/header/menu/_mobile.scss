@@ -1,0 +1,289 @@
+// Vars used in this file
+$button_size: 34px !default;
+$button_transition: .3s !default;
+$button_radius: ($button_size / 14); //($button_size / 14) !default;
+$button_color: white !default;
+
+// Maybe use vars
+$button_arrowleft_transformation: (
+  	transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 90deg)
+) !default;
+$button_arrow360left_transformation: (
+  	transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 360deg)
+) !default;
+
+// Mixins
+@mixin menu-toggle-lines {
+	display: inline-block;
+	height: ($button_size / 7);
+	width: $button_size;
+	border-radius: 20px;
+	transition: $button_transition;
+	background: $button_color;
+}
+
+// Mobile Responsive Menu
+.menu--responsive-menu {
+	position: relative;
+	display: block;
+	margin-top: 8px;;
+
+	@include breakpoint( 'desktop' ) {
+		display: none;
+	}
+
+	.menu-item {
+		position: relative;
+		display: block;
+		width: 100%;
+		text-align: left;
+
+		&.current-menu-item,
+		&:active,
+		&:focus,
+		&:hover {
+
+			.menu-item__link {
+				background: rgba(get_color(primary), 0.05);
+			}
+		}
+
+		&__link {
+			position: relative;
+			display: block;
+			color: rgba(get_color('primary'), 0.5);
+			font-weight: 200;
+			text-align: left;
+			transition: get_transition( 'ease-in-out-quad' );
+			border-radius: 4px;
+
+			&--main {
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 200;
+				padding: 8px 16px;
+				margin-left: 8px;
+				margin-right: 8px;
+			}
+
+			&--opened {
+				font-weight: bold;
+			}
+		}
+
+		&__dropdown {
+			position: relative;
+			display: none;
+			/* border-top: 1px solid rgba(0, 0, 0, 0.2); */
+
+			/* &--depth-0,
+			&--depth-1,
+			&--depth-2 {
+				border-left: 5px solid rgba(0, 0, 0, 0.2);
+			} */
+
+			.menu-item {
+				text-align: left;
+				background-color: $responsive_menu_background;
+				padding: 5px 20px;
+
+				& + .menu-item {
+					&:last-child {
+						border-bottom: 0;
+					}
+				}
+
+				&__link {
+					font-size: 13px;
+					color: white;
+
+					&--dropdown {
+						color: #7B7B7B;
+
+						&:hover {
+							color:#fff;
+						}
+					}
+
+					@include breakpoint( 'desktop' ) {
+						font-size: 15px;
+					}
+				}
+			}
+		}
+
+		&__toggle {
+			position: absolute;
+			top: 50%;
+			right: -10px;
+			display: block;
+			padding: 10px 15px;
+			margin: 0;
+			background: transparent;
+			transform: translateY(-50%);
+			z-index: 1040;
+			outline: none;
+			box-shadow: none;
+			color: white;
+
+			svg {
+				display: block;
+				width: 22px;
+				height: 14px;
+				transition: get_transition( 'ease-in-out-quad' );
+				transform: rotate(180deg);
+				fill: white;
+				fill: currentColor;
+
+				@include breakpoint( 'desktop' ) {
+					width: 28px;
+					height: 20px;
+				}
+			}
+
+			&.rotate-arrow {
+				svg {
+					transform: rotate(0);
+				}
+			}
+		}
+	}
+}
+
+// Responsive Toggle Buttons
+.resp-buttons {
+	transition: get_transition( 'ease-in-out-quad' );
+	@include breakpoint( 'desktop' ) {
+		display: none;
+	}
+
+	&__menu {
+		&-button,
+		&-text {
+			display: inline-block;
+			color: white;
+			vertical-align: middle;
+		}
+
+		&-text {
+			margin: 0 15px;
+		}
+	}
+}
+
+// Menu Toggle Button
+.menu-toggle {
+	cursor: pointer;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 48px;
+	width: 48px;
+	background: transparent;
+	outline: none;
+	border: 0;
+	appearance: none;
+	user-select: none;
+	transition: $button_transition;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.08);
+
+	> * {
+		display: block;
+	}
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+	}
+
+	&__lines {
+		@include menu-toggle-lines;
+		height: 2px;
+		position: relative;
+		width: 16px;
+
+		&::before,
+		&::after {
+			content: '';
+			@include menu-toggle-lines;
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			width: 16px;
+			height: 2px;
+		}
+
+		&::before {
+			top: -7px;
+		}
+
+		&::after {
+			top: 7px;
+		}
+
+		.menu-toggle--active & {
+			transform: scale3d(.8, .8, .8);
+		}
+	}
+}
+
+.site-offcanvas {
+
+	.menu-toggle__lines::before,
+	.menu-toggle__lines::after {
+		background: get_color(grey-200);
+	}
+
+	.header__col--buttons {
+		position: relative;
+				top: auto;
+				transform: none;
+				left: auto;
+	}
+
+	.resp-buttons {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+// Butterfly Effect
+.menu-toggle--xbutterfly {
+
+	.menu-toggle__lines {
+		&::before,
+		&::after {
+			transform-origin: 50% 50%;
+			transition: top .3s .6s ease, transform .3s ease;
+		}
+	}
+
+	&.menu-toggle--active {
+		.menu-toggle__lines {
+			background: transparent;
+
+			&::before,
+			&::after {
+				top: 0;
+				transition: all .3s ease, transform .3s .5s ease;
+				width: 28px;
+			}
+
+			&::before {
+				transform: rotate3d(0, 0, 1, 45deg) translate3d(-4px, 4px, 0);
+			}
+
+			&::after {
+				transform: rotate3d(0, 0, 1, -45deg) translate3d(-4px, -4px, 0);
+			}
+		}
+	}
+}

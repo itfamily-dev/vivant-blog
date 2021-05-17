@@ -1,0 +1,15 @@
+/*** Layout ***/
+.section,
+.am2-block,
+.wp-block-group {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 50px 0;
+
+	&.has-background {
+		margin: 0;
+		padding: 50px 0;
+	}
+}

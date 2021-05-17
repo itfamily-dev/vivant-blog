@@ -1,0 +1,204 @@
+.page-template-template-our-story {
+
+    .our-story {
+
+        &__intro-left {
+            @include breakpoint(desktop) {
+                padding-right: 25px;
+            }
+        }
+
+        &__intro-right {
+            @include breakpoint(desktop) {
+                padding-left: 25px;
+            }
+        }
+
+        &--mission {
+            position: relative;
+            padding-bottom: 80px;
+            .wrapper {
+                    position: relative;
+                    z-index: 10;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 29vw;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: get_color(dark);
+                z-index: 1;
+
+                @include breakpoint(large) {
+                    top: 32%;
+                }
+            }
+        }
+
+        &--values {
+
+            .values {
+                display: flex;
+                padding: $component_margin*4 0 80px;
+                justify-content: space-between;
+
+                @include breakpoint($to: desktop) {
+                    padding-top: $component_margin*2;
+                    padding-bottom: 40px;
+                }
+
+                @include breakpoint($to: tablet) {
+                    padding-top: $component_margin*1.5;
+                }
+
+                &__image {
+                    flex: 1 1 calc(50% - 48px);
+                    max-width: calc(50% - 48px) ;
+
+                    @include breakpoint($to: desktop) {
+                        display: none
+                    }
+
+                    img {
+                        height: auto;
+                        margin: 0;
+                        height: 706px;
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+
+                &__content {
+                    flex: 1 1 calc(50% - 48px);
+                    max-width: calc(50% - 48px) ;
+
+                    @include breakpoint($to: desktop) {
+                       flex: 100%;
+                       max-width: 508px;
+                       margin: 0 auto;
+                    }
+
+                    &-slider {
+                        list-style: none;
+                        text-align: left;
+
+                        li {
+                            opacity: 0.2;
+                            cursor: pointer;
+
+                            &.active {
+                                opacity: 1;
+
+                                .values__content-slider-description {
+                                    display: block;
+                                }
+                            }
+                            &:not(:last-child) {
+                                margin-bottom: $component_margin*2;
+                            }
+                        }
+
+                        &-title {
+                            margin-bottom: $component_margin;
+                        }
+
+                        &-description {
+                            display: none;
+                            padding-top: $component_margin;
+                            border-top: 1px solid rgba(get_color(dark), 0.2);
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &--roots {
+
+            .wrap-content {
+                margin-top: -15vw;
+
+                @include breakpoint(large) {
+                    margin-top: -250px;
+                }
+            }
+
+            .mb-3 {
+
+                @include breakpoint($to: desktop) {
+                    margin-bottom: $component_margin*1.5;
+                }
+            }
+
+            p {
+
+                @include breakpoint(desktop) {
+
+                    &:not(:last-child) {
+                        margin-bottom: $component_margin*3;
+                    }
+                }
+            }
+        }
+
+        &--difference {
+            position: relative;
+
+            .wrapper {
+                position: relative;
+                z-index: 10;
+            }
+
+            .wrap-content {
+
+                h2,p {
+                    display: block;
+
+                    @include breakpoint(mobile) {
+                        display: none;
+                    }
+                }
+
+                @include breakpoint($to: mobile) {
+
+                    h2,p,.big-p {
+                        text-align: left;
+                    }
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 30vw;
+                background-color: #0B0B0B;
+                z-index: 1;
+
+                @include breakpoint(large) {
+                    height: 25%;
+                }
+            }
+        }
+
+        &--banner {
+
+
+            &-logo {
+                display: block;
+                width: 400px;
+                max-width: 60%;
+                margin: 0 auto $component_margin *2;
+            }
+        }
+    }
+}

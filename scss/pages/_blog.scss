@@ -1,0 +1,386 @@
+.blog {
+
+    &-hero {
+        margin-bottom: 56px;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 80px
+        }
+
+        .single-post & {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &-slider {
+
+        &__image {
+
+            img {
+                border-radius: 24px;
+
+                @include breakpoint($to: desktop) {
+                    height: 440px;
+                    object-fit: cover;
+                }
+                @include breakpoint($to: small) {
+                    height: 280px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &__meta {
+            position: absolute;
+            top: 32px;
+            left: 24px;
+            color: #fff;
+            z-index: 100;
+            right: 24px;
+
+            @include breakpoint(small) {
+                right: auto;
+                top: auto;
+                bottom: 40px;
+                left: 40px;
+                max-width: calc(100% - 220px);
+            }
+
+            @include breakpoint(desktop) {
+                max-width: 60%;
+            }
+        }
+
+        .swiper-slide {
+
+            &:after {
+                content: "";
+                background: rgba(11, 11, 11, 0.24);
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 10;
+                border-radius: 24px;
+            }
+        }
+
+        &__title {
+            font-size: 36px;
+            line-height: 44px;
+            font-weight: 200;
+            opacity: 0;
+            transform: translate3d(0,20px,0);
+            transition: 0.2s ease-in-out;
+            margin-bottom: $component_margin/2;
+
+            @include breakpoint($to: small) {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .swiper-slide-active & {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+            }
+        }
+
+        &__excerpt {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: 0.2s ease-in-out;
+            transition-delay: 0.2s;
+            opacity: 0;
+            transform: translate3d(0,20px,0);
+
+            .swiper-slide-active & {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+            }
+
+            @include breakpoint($to: small) {
+                display: none;
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            background: rgba(11, 11, 11, 0.3);
+            border: 1px solid #fff;
+            width: 40px;
+            height: 40px;
+            bottom: 40px;
+            right: 100px;
+            left: auto;
+            border-radius: 50%;
+            margin-top: 0;
+            transform: none;
+            top: auto;
+            z-index: 500;
+            transition: 0.2s ease-in-out;
+            font-weight: bold;
+
+            @include breakpoint($to: small) {
+                right: auto;
+                left: 24px;
+            }
+
+            &:after {
+                font-size: 17px;
+                color: #fff;
+                position: relative;
+                left: -1px;
+            }
+
+            &:hover {
+                background: rgba(11, 11, 11, 0.6);
+            }
+        }
+
+        .swiper-button-next {
+            right: 40px;
+
+            @include breakpoint($to: small) {
+                right: auto;
+                left: 80px;
+            }
+
+            &:after {
+                left: auto;
+                right: -2px;
+            }
+        }
+
+        .category & {
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+
+            .blog-slider__image img {
+                border-radius: 0;
+            }
+
+            .swiper-slide:after {
+                border-radius: 0;
+            }
+
+            .blog-slider__meta {
+
+                @include breakpoint(large) {
+                    max-width: 1115px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    padding-right: 100px;
+                }
+            }
+        }
+    }
+
+    &-navigation {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: $component_margin*2;
+        margin-bottom: $component_margin*1.3;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &.sticky {
+            box-shadow: 0px 6px 7px rgba(11, 11, 11, 0.05), 0px 8px 25px rgba(11, 11, 11, 0.06);
+        }
+
+        @include breakpoint($to: tablet) {
+            overflow: auto;
+            justify-content: flex-start;
+            margin-right: calc(-50vw + 50%);
+        }
+
+        &__item {
+            display: block;
+            color: get_color(dark);
+            opacity: 0.4;
+            transition: get_transition();
+            white-space: nowrap;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 200;
+
+            &.active,
+            &:hover  {
+                opacity: 1;
+                color: get_color(dark);
+            }
+
+            &:not(:last-child) {
+                margin-right: $component_margin*2;
+            }
+        }
+    }
+
+    &-category {
+
+        h2 {
+            margin-bottom: 0;
+            margin-bottom: -24px;
+        }
+
+        .columns {
+            margin-bottom: 0 !important;
+
+            .col {
+
+                padding-top: $component_margin*3;
+
+                &-4 {
+
+                    @include breakpoint($to: desktop) {
+                        flex: calc((6 / 12) * 100%);
+                         max-width: calc((6 / 12) * 100%);
+                    }
+                    @include breakpoint($to: mobile) {
+                        flex: 100%;
+                         max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__cta {
+            display: flex;
+            justify-content: center;
+            padding-top: 48px;
+            padding-bottom: 56px;
+
+            @include breakpoint(desktop) {
+                padding-top: 80px;
+                padding-bottom: 96px;
+            }
+        }
+
+        &--1-col {
+
+            h2 {
+                margin-bottom: $component_margin*1.5;
+            }
+
+            .col {
+                padding-top: 0 !important;
+                &:not(:first-child) {
+                    padding-top: 26px !important;
+                }
+                padding-bottom: 0;
+            }
+        }
+
+
+        &--2-col-v2 {
+
+            h2 {
+                margin-bottom: $component_margin/2;
+            }
+
+            @include breakpoint($to: mobile) {
+                overflow: auto;
+            }
+
+            .columns {
+
+                @include breakpoint($to: mobile) {
+                    margin-right: calc(-50vw + 50%);
+                    overflow: auto;
+                    flex-wrap: nowrap;
+                    -ms-overflow-style: none;  /* IE and Edge */
+                    scrollbar-width: none;  /* Firefox */
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+            }
+
+            .col-6 {
+                padding-top: $component_margin !important;
+                &:nth-child(1) {
+                    flex: 70%;
+                    max-width: 70%;
+
+                    @include breakpoint($to: desktop) {
+                        flex: 100%;
+                        max-width: 100%;
+                    }
+
+                    @include breakpoint($to: mobile) {
+                        width: 256px;
+                        flex: 256px;
+                        min-width: 256px;
+                        margin-right: $component_margin;
+                    }
+                }
+                &:nth-child(2) {
+                    width: 30%;
+                    max-width: 30%;
+
+                    @include breakpoint($to: desktop) {
+                        flex: 50%;
+                        max-width: 50%;
+                    }
+                    @include breakpoint($to: mobile) {
+                        width: 256px;
+                        flex: 256px;
+                        min-width: 256px;
+                        margin-right: $component_margin;
+                    }
+                }
+                &:nth-child(3) {
+                    width: 30%;
+                    max-width: 30%;
+
+                    @include breakpoint($to: desktop) {
+                        flex: 50%;
+                        max-width: 50%;
+                    }
+                    @include breakpoint($to: mobile) {
+                        width: 256px;
+                        flex: 256px;
+                        min-width: 256px;
+                        margin-right: $component_margin;
+                    }
+                }
+                &:nth-child(4) {
+                    flex: 70%;
+                    max-width: 70%;
+
+                    @include breakpoint($to: desktop) {
+                        flex: 100%;
+                        max-width: 100%;
+                    }
+                    @include breakpoint($to: mobile) {
+                        width: 256px;
+                        flex: 256px;
+                        min-width: 256px;
+                        margin-right: $component_margin;
+                    }
+                }
+            }
+
+        }
+
+        &--2-col {
+
+            .col-6 {
+
+                @include breakpoint($to: mobile)  {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

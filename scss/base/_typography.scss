@@ -1,0 +1,148 @@
+body {
+	font: $font_body;
+	color: get_color('dark');
+	background: get_color('body_background');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: $color_link;
+	text-decoration: none;
+	background-color: transparent;
+
+	&:hover {
+		color: $color_link_hover;
+	}
+}
+
+p,
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	margin-bottom: $component_margin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0 0 $component_margin;
+
+	&:last-child:not(:only-child) {
+		margin-bottom: 0;
+	}
+}
+
+@each $tag, $size in $headings {
+	#{$tag},
+	.#{$tag} {
+		font-size: #{$size};
+	}
+}
+
+.h1 {
+	font-size: 36px;
+	line-height: 40px;
+
+	@include breakpoint(desktop) {
+		font-size: 48px;
+		line-height: 56px;
+	}
+}
+
+.h2 {
+	font-size: 24px;
+	line-height: 32px;
+
+	@include breakpoint(small) {
+		font-size: 36px;
+		line-height: 44px;
+	}
+}
+
+.display-1 { // Display 1
+	font-size: 40px;
+	line-height: 48px;
+
+	@include breakpoint(desktop) {
+		font-size: 64px;
+		line-height: 72px;;
+	}
+}
+
+.display-2 { // Display 2
+	font-weight: 200;
+	font-size: 40px;
+	line-height: 48px;
+
+	@include breakpoint(desktop) {
+		font-size: 64px;
+		line-height: 72px;;
+	}
+}
+
+.lead {
+	font-size: 18px;
+	line-height: 28px;
+
+	@include breakpoint(desktop) {
+		font-size:  24px;
+		line-height: 36px;
+	}
+}
+
+.big-p {
+	font-size: 20px;
+	line-height: 28px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include breakpoint(desktop) {
+		font-size: 36px;
+		line-height: 56px;
+		margin-bottom: $component_margin*2;
+	}
+}
+
+.font-18 {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.small {
+	font-size: 0.88rem;
+	line-height: 1.5;
+}
+
+.smallest {
+	font-size: 0.77rem;
+	line-height: 1.5;
+}
+
+.micro {
+	font-size: 0.66rem;
+}
+
+.font-500 {
+	font-weight: 200;
+}
+
+.font-400 {
+	font-weight: 200;
+}
+
+.font-300 {
+	font-weight: 200;
+}

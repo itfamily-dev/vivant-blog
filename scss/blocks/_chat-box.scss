@@ -1,0 +1,46 @@
+.chat-box {
+	position: relative;  
+	text-align: center;
+	background-color: get_color(light);
+	padding: $component_margin*7 0px;
+
+	@include breakpoint($to: tablet) {
+    	padding: $component_margin*4 0px;
+    } 
+
+    &__title {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: $component_margin*2;
+
+        @include breakpoint($to: tablet) {
+          	font-size: 26px;
+       		line-height: 34px;
+        }  
+    }
+
+    .button {
+    	width: 100%;
+    	position: relative;
+    	max-width: 416px;
+    	text-align: left;
+    	white-space: initial; 
+
+    	@include breakpoint($to: mobile) {
+    		text-align: center;
+        } 
+    }
+
+    &__icon {
+    	width: 24px;
+    	height: 24px;
+    	opacity: 0.4;
+    	position: absolute;
+    	right: 32px;
+    	fill: get_color(primary); 
+
+    	@include breakpoint($to: mobile) {
+         	display: none;
+        } 
+    } 
+}

@@ -1,0 +1,63 @@
+.logo {
+	margin: 0px;
+	line-height: 1;
+
+	@include breakpoint( 'mobile' ) {
+		height: auto;
+		max-width: initial;
+	}
+
+	&__link {
+		display: block;
+		font-size: 24px;
+		color: #FFFFFF;
+
+		img {
+			display: block;
+			width: auto;
+		}
+
+		&:hover {
+			color: #EEEEEE;
+		}
+	}
+
+	&__icon {
+
+		&--mobile {
+			width: 30px;
+			height: 32px;
+			margin: 0 auto;
+			display: block;
+
+			@include breakpoint(mobile) {
+				display: none;
+			}
+		}
+
+		&--desktop {
+			width: 144px;
+			height: 24px;
+			display: none;
+
+			@include breakpoint(mobile) {
+				display: block;
+			}
+
+			@include breakpoint($to: desktop) {
+				margin: 0 auto;
+			}
+		}
+
+		&--footer {
+			width: 30px;
+			height: 32px;
+			margin: 0 auto $component_margin;
+			display: block;
+
+			@include breakpoint(tablet) {
+				margin: 0 auto;
+			}
+		}
+	}
+}
