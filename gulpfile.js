@@ -1,10 +1,10 @@
 const { src, dest, watch, series } = require("gulp");
+var sourcemaps = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const minifyCSS = require("gulp-csso");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const rename = require("gulp-rename");
-
 
 // Paths
 var paths = {
@@ -25,16 +25,18 @@ var paths = {
 
 
 function css() {
-	return src(paths.scss.main, { sourcemaps: true })
+	return src(paths.scss.main)
+		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(minifyCSS())
 		.pipe(rename("frontend.css"))
-		.pipe(dest(paths.root), { sourcemaps: true })
+		.pipe(sourcemaps.write('/'))
+		.pipe(dest(paths.root));
 }
 
 
 function js() {
-	return src(paths.js.src, { sourcemaps: true })
+	return src(paths.js.src)
 		.pipe(
 			babel({
 				presets: ["@babel/env"],
