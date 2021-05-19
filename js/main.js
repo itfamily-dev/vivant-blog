@@ -1,22 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
 	// code...
-    blogSlider = tns({
-        container: ".js-blog-slider",
-        mode: "gallery",
-        items: 1,
-        slideBy: 1,
-        mouseDrag: true,
-        controlsContainer: '.blog-slider__controls',
-        prevButton: '.blog-slider-prev',
-        nextButton: '.blog-slider-next',
-        nav: false,
-    });
+	let jsBlogSlider = document.querySelector('.js-blog-slider');
+	if (document.body.contains(jsBlogSlider)) {
+		blogSlider = tns({
+			container: ".js-blog-slider",
+			mode: "gallery",
+			items: 1,
+			slideBy: 1,
+			mouseDrag: true,
+			controlsContainer: ".blog-slider__controls",
+			prevButton: ".blog-slider-prev",
+			nextButton: ".blog-slider-next",
+			nav: false,
+		});
+	}
 
     // Posts slider
-    postSlider = tns({
+	let postsSlider = document.querySelector('.js-blog-slider');
+	if (document.body.contains(postsSlider)) {
+		postSlider = tns({
 			container: ".js-post-slider",
 			items: 1,
-            mouseDrag: true,
+			mouseDrag: true,
 			slideBy: 1,
 			gutter: 33,
 			controlsContainer: ".post-slider__navigation",
@@ -34,4 +39,5 @@ document.addEventListener("DOMContentLoaded", function () {
 				},
 			},
 		});
+	}
 });
