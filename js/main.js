@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
     // Posts slider
-	let postsSlider = document.querySelector('.js-blog-slider');
+	let postsSlider = document.querySelector('.js-post-slider');
 	if (document.body.contains(postsSlider)) {
 		postSlider = tns({
 			container: ".js-post-slider",
