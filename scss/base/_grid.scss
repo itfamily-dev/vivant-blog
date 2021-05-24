@@ -6,7 +6,7 @@
 	padding-right: 24px;
 	padding-left: 24px;
 
-	@include breakpoint(mobile) {
+	@include Tablet {
 		padding-right: 40px;
 		padding-left: 40px;
 	}

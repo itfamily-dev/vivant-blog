@@ -1,5 +1,5 @@
 .page-template-template-meet-the-team {
-    background: get_color('dark-300');
+    background: #171717;
 
 
     .team {
@@ -152,7 +152,7 @@
             font-size: 14px;
             letter-spacing: 0.15em;
             text-align: center;
-            color: get_color(dark);
+            color: #0B0B0B;
             text-transform: uppercase;
             line-height: 1;
         }
@@ -161,12 +161,12 @@
             padding: 24px 40px;
             justify-content: center;
             position: relative;
-            border-bottom: 1px solid rgba(get_color(dark), 0.2);
+            border-bottom: 1px solid rgba(#0B0B0B, 0.2);
         }
 
         &__footer {
             padding: 24px 40px;
-            border-top: 1px solid rgba(get_color(dark), 0.2);
+            border-top: 1px solid rgba(#0B0B0B, 0.2);
             text-align: right;
         }
 

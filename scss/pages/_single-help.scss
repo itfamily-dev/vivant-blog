@@ -2,7 +2,7 @@
     &__back {
         font-size: 18px;
         line-height: 28px;
-        color: get_color(dark);
+        color: #0B0B0B;
         margin-bottom: 22px;
         display: block;
         transition: 0.25s ease-in-out;
@@ -35,7 +35,7 @@
             font-size: 24px;
             line-height: 32px;
 
-            @include breakpoint(mobile) {
+            @include Tablet {
                 font-size: 36px;
                 line-height: 44px;
                 margin-bottom: $component_margin*4;
@@ -43,7 +43,7 @@
         }
 
         p,ul,ol {
-            color: rgba(get_color(dark), 0.7);
+            color: rgba(#0B0B0B, 0.7);
             margin-bottom: $component_margin*4;
         }
 
@@ -74,7 +74,7 @@
             bottom: 0;
             left: 0;
             height: 1px;
-            background: get_color(dark);
+            background: #0B0B0B;
             opacity: 0.1;
         }
 

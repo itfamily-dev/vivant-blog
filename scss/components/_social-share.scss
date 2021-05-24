@@ -31,7 +31,7 @@
                     border-left:4px solid transparent;
                     border-right:4px solid transparent;
 
-                    border-top:4px solid get_color(dark);
+                    border-top:4px solid #0B0B0B;
                     position: absolute;
                     bottom: -4px;
                     left: 50%;
@@ -67,7 +67,7 @@
             svg {
                 width: 16px;
                 height: 16px;
-                fill: get_color(dark);
+                fill: #0B0B0B;
             }
         }
     }

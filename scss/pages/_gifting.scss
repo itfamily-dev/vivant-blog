@@ -1,5 +1,5 @@
 .page-template-template-gifting {
-    background: get_color( 'grey-300' );
+    background: #171717;
 
     .gifting-intro {
         padding-bottom: 80px;
@@ -13,7 +13,7 @@
             height: 480px;
             object-fit: cover;
 
-            @include breakpoint(mobile) {
+            @include Tablet {
                 border-radius: 32px;
             }
 

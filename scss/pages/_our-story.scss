@@ -29,7 +29,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background-color: get_color(dark);
+                background-color: #0B0B0B;
                 z-index: 1;
 
                 @include breakpoint(large) {
@@ -108,7 +108,7 @@
                         &-description {
                             display: none;
                             padding-top: $component_margin;
-                            border-top: 1px solid rgba(get_color(dark), 0.2);
+                            border-top: 1px solid rgba(#0B0B0B, 0.2);
 
                             &:hover {
                                 opacity: 1;
@@ -161,7 +161,7 @@
                 h2,p {
                     display: block;
 
-                    @include breakpoint(mobile) {
+                    @include Tablet {
                         display: none;
                     }
                 }

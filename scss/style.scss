@@ -32,39 +32,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* Base. */
 @import 'base/index';
 
-/* Layout. */
-@import 'layout/index';
-
 /* Components. */
-@import 'blocks/root';
-@import 'blocks/media-text';
-@import 'blocks/accordions';
-@import 'blocks/core-group';
-@import 'blocks/buttons';
-@import 'blocks/maps';
-@import 'blocks/tabs';
-@import 'blocks/slider';
-@import 'blocks/chat-box';
+@import 'components/global';
+@import 'components/buttons';
 @import 'components/card';
 @import 'components/post-item';
-@import 'components/breadcrumbs';
-@import 'components/forms';
 @import 'components/social-share';
 @import 'components/image';
-@import 'components/modals';
-@import 'components/pagination';
 @import 'components/image-banner';
-@import 'components/social';
-@import 'components/ctas';
-@import 'components/custom-list';
 @import 'components/post-slider';
-@import 'components/statuses';
 @import 'components/small-card';
-@import 'components/svg-icons';
-@import 'components/tables';
-@import 'components/video';
 @import 'components/search-form';
 
 /* Vendor. */
-@import 'vendor/responsive-tables';
 @import 'vendor/micromodal';

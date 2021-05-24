@@ -12,7 +12,7 @@
         border-radius: 16px;
         z-index: 10;;
 
-        @include breakpoint(mobile) {
+        @include Tablet {
             border-radius: 32px;
         }
     }
@@ -37,7 +37,7 @@
         h2,p {
             display: none;
 
-            @include breakpoint(mobile) {
+            @include Tablet {
                 display: block;
             }
         }

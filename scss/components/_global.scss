@@ -1,11 +1,20 @@
-@import './block';
-@import './sidebar';
-@import './containers';
+.section {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 50px 0;
+
+	&.has-background {
+		margin: 0;
+		padding: 50px 0;
+	}
+}
 
 .content {
     padding: $component_margin*1.5 0;
 
-    @include breakpoint(mobile) {
+    @include Tablet {
         padding: 40px 0;
     }
 
@@ -18,7 +27,7 @@
     }
 
     &--dark {
-        background: get_color( 'grey-300' );
+        background: #171717;
         color: #fff;
 
         .big-p {
@@ -44,4 +53,9 @@
     &--for-wine {
         padding-top: 0;
     }
+}
+
+/* Sidebar */
+.sidebar {
+    color: #0B0B0B;
 }

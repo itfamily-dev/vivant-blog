@@ -41,7 +41,7 @@
         letter-spacing: 0.1em;
         font-size: 11px;
         line-height: 1;
-        color: get_color(dark);
+        color: #0B0B0B;
         padding: 4px 8px;
         background: rgba(11, 11, 11, 0.1);
         border-radius: 20px;
@@ -84,7 +84,7 @@
         font-size: 18px;
         line-height: 28px;
 
-        @include breakpoint(mobile) {
+        @include Tablet {
             font-size: 24px;
             line-height: 36px;
         }
@@ -95,7 +95,7 @@
             font-weight: 500;
             margin-bottom: $component_margin*1.5;
 
-            @include breakpoint(mobile) {
+            @include Tablet {
                 padding-top: 16px;
                 font-size: 36px;
                 line-height: 44px;
@@ -105,7 +105,7 @@
 
         p,ul,ol {
             font-weight: 200;
-            color: rgba(get_color(dark), 0.7);
+            color: rgba(#0B0B0B, 0.7);
             margin-bottom: $component_margin*2.5;
 
             @include breakpoint(desktop) {
@@ -215,7 +215,7 @@
                     content: "";
                     height: 1px;
                     width: 20%;
-                    background-color: get_color(dark);
+                    background-color: #0B0B0B;
                     position: absolute;
                     left: 0;
                     top: 50%;
@@ -367,7 +367,7 @@
                     content: "";
                     height: 1px;
                     width: 20%;
-                    background-color: get_color(dark);
+                    background-color: #0B0B0B;
                     position: absolute;
                     left: 0;
                     top: 50%;
@@ -439,7 +439,7 @@
                     right: 0;
                     bottom: 0;
                     left: 0;
-                    background: rgba(get_color(dark), 0.32);
+                    background: rgba(#0B0B0B, 0.32);
                     z-index: 1 ;
                     transition: get_transition();
                     border-radius: 24px;
@@ -448,7 +448,7 @@
                 &:hover {
 
                     &:after {
-                        background: rgba(get_color(dark), 0.6)
+                        background: rgba(#0B0B0B, 0.6)
                     }
                 }
 

@@ -1,17 +1,4 @@
 /**
-* Variables used in this file from abstracts/_variable.scss
-*
-get_color(primary)
-get_color(secondary)
-get_color(featured)
-get_color(danger)
-get_color(dark)
-get_color(gray)
-$text_color_primary
-$text_color_secondary
-$text_color_featured
-$text_color_danger
-
 *
 */
 /**
@@ -37,7 +24,7 @@ button,
 	padding: $component_margin $component_margin*2;
 	user-select: none;
 	background: #fff;
-	color: get_color( 'dark' );
+	color: #0B0B0B;
 	border: 1px solid #fff;
 	box-shadow: none;
 	transition: get_transition( 'ease-in-out-quad' );
@@ -48,13 +35,13 @@ button,
 	&:focus {
 		background: rgba(255, 255, 255, 0.8);
 		border: 1px solid rgba(255, 255, 255, 0.8);
-		color: get_color(dark);
+		color: #0B0B0B;
 	}
 
 	&:active {
 		background: rgba(255, 255, 255, 0.6);
 		border: 1px solid rgba(255, 255, 255, 0.6);
-		color: get_color(dark);
+		color: #0B0B0B;
 	}
 
 	&:last-child {
@@ -85,26 +72,26 @@ button,
 	}
 
 	&--bordered {
-		border-color: rgba(get_color(dark), 0.4);
+		border-color: rgba(#0B0B0B, 0.4);
 
 		&:focus {
-			border-color: rgba(get_color(dark), 0.4);
+			border-color: rgba(#0B0B0B, 0.4);
 		}
 
 		&:hover {
-			border-color: rgba(get_color(dark), 0.6);
+			border-color: rgba(#0B0B0B, 0.6);
 			background: transparent;
-			color: get_color(dark);
+			color: #0B0B0B;
 		}
 
 		&:active{
-			border-color: get_color(dark);
+			border-color: #0B0B0B;
 		}
 	}
 
 	&--primary {
-		background-color: get_color(primary);
-		border-color: get_color(primary);
+		background-color: #1B1B1B;
+		border-color: #1B1B1B;
 		color: #fff;
 		border-radius: 200px;
 
@@ -149,12 +136,12 @@ button,
 
 		&:hover,
 		&:active {
-			color: get_color(secondary);
-			border: 1px solid get_color(secondary);
+			color: #ECBE71;
+			border: 1px solid #ECBE71;
 
 			svg {
 				transition: get_transition( 'ease-in-out-quad' );
-				fill: get_color(secondary);
+				fill: #ECBE71;
 			}
 		}
 
@@ -176,7 +163,7 @@ button,
 	&--submit {
 		color: white;
 		border-radius: 200px;
-		background-color: get_color(dark);
+		background-color: #0B0B0B;
 		font-size: 14px;
 		line-height: 20px;
 		padding: 10px;
@@ -187,7 +174,7 @@ button,
 
 		&:hover {
 			color: white;
-			background-color: get_color(secondary);
+			background-color: #ECBE71;
 		}
 	}
 }

@@ -3,7 +3,7 @@
     &-hero {
         margin-bottom: 56px;
 
-        @include breakpoint(mobile) {
+        @include Tablet {
             margin-bottom: 80px
         }
 
@@ -217,7 +217,7 @@
 
         &__item {
             display: block;
-            color: get_color(dark);
+            color: #0B0B0B;
             opacity: 0.4;
             transition: get_transition();
             white-space: nowrap;
@@ -228,7 +228,7 @@
             &.active,
             &:hover  {
                 opacity: 1;
-                color: get_color(dark);
+                color: #0B0B0B;
             }
 
             &:not(:last-child) {

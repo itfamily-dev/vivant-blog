@@ -51,7 +51,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background-color: get_color(dark);
+                background-color: #0B0B0B;
                 z-index: 1;
 
                 @include breakpoint(large) {
@@ -82,7 +82,7 @@
                     left: 0;
                     right: 0;
                     height: 26vw;
-                    background-color: get_color(dark);
+                    background-color: #0B0B0B;
                     z-index: 1;
 
                     @include breakpoint(large) {

@@ -10,7 +10,7 @@
 
     &__title {
         margin-bottom: $component_margin/2;
-        color: get_color("dark");
+        color: #0B0B0B;
         display: -webkit-box;
          -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -167,7 +167,7 @@
                     height: 256px;
                 }
 
-                @include breakpoint(mobile) {
+                @include Tablet {
                     object-fit: cover;
                     height: 280px;
                 }
@@ -186,7 +186,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: rgba(get_color(dark), 0.32);
+            background: rgba(#0B0B0B, 0.32);
             z-index: 1 ;
             transition: get_transition();
             border-radius: 24px;
@@ -195,7 +195,7 @@
         &:hover {
 
             &:after {
-                background: rgba(get_color(dark), 0.6)
+                background: rgba(#0B0B0B, 0.6)
             }
         }
 
@@ -281,7 +281,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: rgba(get_color(dark), 0.32);
+            background: rgba(#0B0B0B, 0.32);
             z-index: 1 ;
             transition: get_transition();
             border-radius: 24px;
@@ -290,7 +290,7 @@
         &:hover {
 
             &:after {
-                background: rgba(get_color(dark), 0.6)
+                background: rgba(#0B0B0B, 0.6)
             }
         }
 

@@ -38,9 +38,9 @@
 
 		/* general options for all forms */
 		input:not([type="submit"]), select, textarea {
-			border: 1px solid rgba(get_color(dark), 0.15);
+			border: 1px solid rgba(#0B0B0B, 0.15);
 			border-radius: 200px;
-			color: rgba(get_color(dark), 0.6);
+			color: rgba(#0B0B0B, 0.6);
 			width: 100%;
 			font-size: 16px;
 			line-height: 24px;
@@ -60,16 +60,16 @@
 
 
 		::placeholder {
-			color: rgba(get_color(dark), 0.6);
+			color: rgba(#0B0B0B, 0.6);
 			opacity: 1;
 		}
 
 		:-ms-input-placeholder {
-			color: rgba(get_color(dark), 0.6);
+			color: rgba(#0B0B0B, 0.6);
 		}
 
 		::-ms-input-placeholder {
-			color: rgba(get_color(dark), 0.6);
+			color: rgba(#0B0B0B, 0.6);
 		}
 
 		&-submit {
@@ -88,7 +88,7 @@
 					transition: bottom .3s linear .3s,-webkit-transform .3s linear;
 					transition: bottom .3s linear .3s,transform .3s linear;
 					transition: bottom .3s linear .3s,transform .3s linear,-webkit-transform .3s linear;
-					background-color: rgba(get_color(dark), 0.6);
+					background-color: rgba(#0B0B0B, 0.6);
 					height: 2px;
 					top: 50%;
 					width: 9px;
@@ -120,16 +120,16 @@
 				min-height: 200px;
 
 				&::placeholder {
-					color: rgba(get_color(dark), 0.3);
+					color: rgba(#0B0B0B, 0.3);
 					opacity: 1;
 				}
 
 				&:-ms-input-placeholder {
-					color: rgba(get_color(dark), 0.3);
+					color: rgba(#0B0B0B, 0.3);
 				}
 
 				&::-ms-input-placeholder {
-					color: rgba(get_color(dark), 0.3);
+					color: rgba(#0B0B0B, 0.3);
 				}
 
 			}

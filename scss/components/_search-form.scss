@@ -9,7 +9,7 @@
 		border-radius: 200px;
 		border: 1px solid rgba(11, 11, 11, 0.15);
 		padding: 10px 20px;
-		color: get_color(dark);
+		color: #0B0B0B;
 
 		&:focus {
 			outline: none;
@@ -24,7 +24,7 @@
 	&__message {
 		padding: 24px;
 		text-align: left;
-		color: get_color(dark);
+		color: #0B0B0B;
 	}
 
 	&__suggest {
@@ -59,7 +59,7 @@
 			}
 
 			&:hover {
-				background: rgba(get_color(dark), 0.05);
+				background: rgba(#0B0B0B, 0.05);
 			}
 		}
 	}

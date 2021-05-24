@@ -3,10 +3,72 @@
 * Variables
 *
 **/
-@import 'variables/breakpoints';
-@import 'variables/colors';
-@import 'variables/fonts';
-@import 'variables/grid';
-@import 'variables/transitions';
-@import 'variables/links';
-@import 'variables/responsive_menu';
+
+/**
+*
+* Breakpoints
+* usage : @include breakpoint(desktop);
+**/
+$grid_spacing: 15px;
+
+$breakpoints: (
+    small: 440px,
+    mobile: 640px,
+    tablet: 768px,
+    tablet-large: 840px,
+    desktop: 1024px,
+    large: 1294px,
+    extra-large: 1921px,
+) !default;
+
+/**
+ * Colors
+ **/
+
+$colors: (
+    primary: #1B1B1B,
+    secondary: #ECBE71,
+    danger: #B2153D, // maybe keep for errors
+    grey-100: #F7F7F7,
+    grey-200: #6A6A6A,
+    grey-300:#171717,
+    dark: #0B0B0B,
+    light: #fff,
+    body_background: #fff,
+);
+
+$font_family: 'Avenir', Helvetica, Arial, sans-serif;
+$font_size: 18px;
+$font_body: 400 18px/28px $font_family;
+
+$headings: (
+	"h1": 2.66rem,
+	"h2": 2rem,
+	"h3": 24px,
+	"h4": 0.72rem,
+	"h5": 0.61rem,
+	"h6": 1.25rem,
+)!default;
+
+$mobile_headings: (
+	"h1": 2rem,
+	"h2": 1.33rem,
+	"h3": 0.72rem,
+	"h4": 0.61rem,
+)!default;
+
+/**
+*
+* Grid
+*
+**/
+
+$grid_content: 1200px; //wrapper
+$grid_content_narrow: $grid_content * .8;
+$grid_margin: 20px;
+$grid_padding: 15px;
+$component_margin: 16px;
+
+/** Links **/
+$color_link: #0b0b0b;
+$color_link_hover: lighten($color_link, 10);
