@@ -1,9 +1,9 @@
 .single-help {
     &__back {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
         color: #0B0B0B;
-        margin-bottom: 22px;
+        margin-bottom: 2.2rem;
         display: block;
         transition: 0.25s ease-in-out;
 
@@ -17,9 +17,9 @@
         }
 
         .back__icon {
-            width: 12px;
-            height: 13px;
-            margin-right: 10px;
+            width: 1.2rem;
+            height: 1.3rem;
+            margin-right: 1rem;
         }
 
         &:hover {
@@ -28,16 +28,16 @@
     }
 
     &__content {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
 
         h2 {
-            font-size: 24px;
-            line-height: 32px;
+            font-size: 2.4rem;
+            line-height: 3.2rem;
 
             @include Tablet {
-                font-size: 36px;
-                line-height: 44px;
+                font-size: 3.6rem;
+                line-height: 4.4rem;
                 margin-bottom: $component_margin*4;
             }
         }
@@ -48,9 +48,9 @@
         }
 
         .wp-block-image:not(.alignfull) {
-            border-radius: 24px;
+            border-radius: 2.4rem;
             img {
-                border-radius: 24px;
+                border-radius: 2.4rem;
             }
         }
 
@@ -73,77 +73,74 @@
             right: 0;
             bottom: 0;
             left: 0;
-            height: 1px;
+            height: 0.1rem;
             background: #0B0B0B;
             opacity: 0.1;
         }
 
         &-title {
             font-weight: 200;
-            font-size: 24px;
-            line-height: 32px;
             text-transform: capitalize;
-            margin-bottom: $component_margin*3.5;
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+            margin-bottom: $component_margin*2;
 
-
-            @include breakpoint($to: mobile) {
-                font-size: 24px;
-                line-height: 32px;
-                margin-bottom: $component_margin*2;
+            @include Tablet {
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+                margin-bottom: $component_margin*3.5;
             }
         }
 
         &-columns {
-            flex-direction: inherit;
-            grid-gap: 48px;
-            grid-template-columns: repeat(2, 1fr);
-            display: grid;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin-right: calc(-50vw + 50%);
+            grid-gap: 4.8rem;
 
-            @include breakpoint($to: tablet) {
-                display: flex;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                margin-right: calc(-50vw + 50%);
+            @include Tablet {
+                flex-direction: inherit;
+                grid-template-columns: repeat(2, 1fr);
+                display: grid;
+                margin-right: -$grid_spacing;
             }
         }
 
 
         &-col {
-            @include breakpoint($to: tablet) {
-                flex: 256px;
-                min-width: 256px;
+            flex: 25.6rem;
+            min-width: 25.6rem;
+
+            @include Tablet {
+                min-width: none;
+                flex: 1;
             }
         }
 
-        @include breakpoint($to: tablet) {
+        margin-top: $component_margin*3;
 
-            margin-top: $component_margin*3;
+        .post-item {
 
-            .post-item {
+            position: relative;
 
-                position: relative;
+            &__title {
+                margin-bottom: $component_margin;
 
-                &__title {
-                    margin-bottom: $component_margin;
-
-                    @include breakpoint(desktop) {
-                        font-size: 36px;
-                        line-height: 44px;
-                        font-weight: 200;
-                    }
+                @include desktop-sm {
+                    font-size: 3.6rem;
+                    line-height: 4.4rem;
+                    font-weight: 200;
                 }
             }
         }
 
-        @include breakpoint(tablet, desktop) {
+        .col-6 {
+            flex: calc((6 / 12) * 100%);
+            max-width: calc((6 / 12) * 100%);
 
-            .col-6 {
-                flex: calc((6 / 12) * 100%);
-                max-width: calc((6 / 12) * 100%);
-
-                &:last-child {
-                    display: none;
-                }
+            &:last-child {
+                display: none;
             }
         }
     }

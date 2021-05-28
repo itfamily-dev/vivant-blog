@@ -1,7 +1,6 @@
 .page-template-template-meet-the-team {
     background: #171717;
 
-
     .team {
 
         &-intro {
@@ -9,46 +8,45 @@
                 width: 100%;
                 flex: 100%;
                 max-width: 100%;
+                padding-left: 0.8rem;
+                padding-right: 0.8rem;
 
-                @include breakpoint(small) {
+                @include Tablet {
                     width: 50%;
                     flex: 50%;
                     max-width: 50%;
                 }
-                @include breakpoint(tablet) {
+                @include desktop-sm {
                     width: 33.33%;
                     flex: 33.33%;
                     max-width: 33.33%;
                 }
-
-                @include breakpoint(small, desktop) {
-                    padding-left: 8px;
-                    padding-right: 8px;
-                }
             }
 
             .columns {
+                margin-left: -0.8rem;
+                margin-right: -0.8rem;
 
-                @include breakpoint($to: desktop) {
-                    margin-left: -8px;
-                    margin-right: -8px;
+                @include desktop-sm {
+                    margin-left: -$grid_spacing;
+                    margin-right: -$grid_spacing;
                 }
             }
         }
 
 
         &-text {
-            max-width: 930px;
+            max-width: 93rem;
             margin-left: auto;
             margin-right: auto;
         }
 
         &__member {
             text-align: left;
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
 
-            @include breakpoint(desktop) {
-                margin-bottom: 26px;
+            @include desktop-sm {
+                margin-bottom: 2.6rem;
             }
 
             &-wrap {
@@ -56,25 +54,25 @@
             }
 
             &-image {
-                border-radius: 24px;
+                border-radius: 2.4rem;
                 display: block;
                 line-height: 1;
-                margin-bottom: 20px;
+                margin-bottom: 2rem;
                 height: auto;
                 width: 100%;
             }
 
             &-name {
                 font-weight: 200;
-                font-size: 24px;
-                line-height: 32px;
+                font-size: 2.4rem;
+                line-height: 3.2rem;
                 margin-top: $component_margin;
                 margin-bottom: 0;
             }
 
             &-title {
-                font-size: 18px;
-                line-height: 28px;
+                font-size: 1.8rem;
+                line-height: 2.8rem;
                 opacity: 0.7;
                 font-weight: 200;
                 margin-bottom: 0;
@@ -86,31 +84,32 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                margin-top: 10px;
+                margin-top: 1rem;
 
                 li {
-                    font-size: 11px;
-                    line-height: 11px;
+                    font-size: 1.1rem;
+                    line-height: 1.1rem;
                     letter-spacing: 0.1em;
                     font-weight: 200;
-                    padding: 4px 8px;
-                    margin-bottom: 5px;
+                    padding: 0.4rem 0.8rem;
+                    margin-bottom: 0.5rem;
 
                     &:not(:last-child) {
-                        margin-right: 5px;
+                        margin-right: 0.5rem;
                     }
                 }
 
                 &-item {
                     background: rgba(#fff,0.2);
-                    border-radius: 20px;
+                    border-radius: 2rem;
                     text-transform: uppercase;
+                    max-width: 8rem;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
 
-                    @include breakpoint(small,desktop) {
-                        max-width: 80px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
+                    @include desktop-sm {
+                        max-width: none;
                     }
                 }
             }
@@ -120,17 +119,17 @@
                 align-items: center;
 
                 img {
-                    width: 16px;
-                    height: 16px;
+                    width: 1.6rem;
+                    height: 1.6rem;
                     display: block;
-                    margin-right: 8px;
+                    margin-right: 0.8rem;
                 }
 
                 &-location {
                     letter-spacing: 0.1em;
                     text-transform: uppercase;
-                    font-size: 11px;
-                    line-height: 20px;
+                    font-size: 1.1rem;
+                    line-height: 2rem;
                     margin-bottom: 0;
                     opacity: 0.5;
                 }
@@ -142,14 +141,14 @@
 
         &__container {
             padding: 0;
-            width: 730px !important;
-            border-radius: 16px;
+            width: 73rem !important;
+            border-radius: 1.6rem;
             overflow: hidden;
             max-width: 92%;
         }
 
         &__title {
-            font-size: 14px;
+            font-size: 1.4rem;
             letter-spacing: 0.15em;
             text-align: center;
             color: #0B0B0B;
@@ -158,15 +157,15 @@
         }
 
         &__header {
-            padding: 24px 40px;
+            padding: 2.4rem 4rem;
             justify-content: center;
             position: relative;
-            border-bottom: 1px solid rgba(#0B0B0B, 0.2);
+            border-bottom: 0.1rem solid rgba(#0B0B0B, 0.2);
         }
 
         &__footer {
-            padding: 24px 40px;
-            border-top: 1px solid rgba(#0B0B0B, 0.2);
+            padding: 2.4rem 4rem;
+            border-top: 0.1rem solid rgba(#0B0B0B, 0.2);
             text-align: right;
         }
 
@@ -174,8 +173,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 28px;
-            padding: 5px;
+            right: 2.8rem;
+            padding: 0.5rem;
             color: #6A6A6A;
             line-height: 1;
 
@@ -190,15 +189,15 @@
         }
 
         &__content {
-            max-height: 400px !important;
+            max-height: 40rem !important;
             overflow: auto;
-            padding: 24px;
+            padding: 2.4rem;
             margin:  0;
             color: #0B0B0B;
-            padding-bottom: 60px;
+            padding-bottom: 3rem;
 
-             @include breakpoint($to: tablet) {
-                padding-bottom: 30px;
+            @include Tablet {
+                 padding-bottom: 6rem;
             }
         }
 
@@ -206,83 +205,89 @@
             padding: 0;
 
             &-left {
-                max-width: 25%;
+                max-width:50%;
                 margin-right: $component_margin*1.5;
 
-                @include breakpoint($to: tablet) {
-                   max-width:50%;
+                @include Tablet {
+                    max-width: 25%;
                 }
             }
 
             &-wrap {
+                flex-direction: column;
 
-                @include breakpoint($to: tablet) {
-                    flex-direction: column;
+                @include Tablet {
+                    flex-direction: row;
                 }
             }
 
             &-description {
-                font-size: 24px;
                 color: #0B0B0B;
                 font-weight: 200;
-                margin-top: $component_margin;
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                margin-top: $component_margin/2;
 
-                @include breakpoint($to: tablet) {
-                    font-size: 18px;
-                    line-height: 28px;
-                    margin-top: $component_margin/2;
+                @include Tablet {
+                    font-size: 2.4rem;
+                    line-height: 3.6rem;
+                    margin-top: $component_margin;
                 }
             }
 
             &-name {
-                font-size: 36px;
-                line-height: 44px;
+                font-size: 2.4rem;
+                line-height: 3.2rem;
 
-                 @include breakpoint($to: tablet) {
-                    font-size: 24px;
-                    line-height: 32px;
-                    margin-top: 8px;
+                @include Tablet {
+                    font-size: 3.6rem;
+                    line-height: 4.4rem;
+                    margin-top: 0.8rem;
                 }
             }
 
             &-title {
                 font-weight: 200;
                 color: #0B0B0B;
-                font-size: 24px;
-                line-height: 32px;
                 opacity: 1;
-                margin-top: 8px;
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+                margin-top: 0.4rem;
 
-                @include breakpoint($to: tablet) {
-                    font-size: 18px;
-                    line-height: 26px;
-                    margin-top: 4px;
+                @include Tablet {
+                    font-size: 2.4rem;
+                    line-height: 3.2rem;
+                    margin-top: 0.8rem;
                 }
             }
 
             &-image {
+                margin-bottom: 1rem;
 
-                @include breakpoint($to: tablet) {
-                    margin-bottom: 10px;
+                @include Tablet {
+                    margin-bottom: 0;
                 }
             }
 
             &-interests {
-                margin-top: 16px;
+                margin-top: 1.6rem;
+                margin-bottom: 0.8rem;
 
-                @include breakpoint($to: tablet) {
-                    margin-bottom: 8px;
+                @include Tablet {
+                    margin-bottom: 0;
                 }
 
                 li {
-                    margin-right: 8px;
-                    margin-bottom: 8px;
+                    margin-right: 0.8rem;
+                    margin-bottom: 0.8rem;
+                    max-width: none;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
 
-                    @include breakpoint(small,desktop) {
-                        max-width: none;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
+                    @include desktop-sm {
+                        white-space: normal;
+                        overflow: auto;
                     }
                 }
             }

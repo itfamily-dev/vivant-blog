@@ -3,48 +3,48 @@
 
 	&__title {
 		font-weight: 200;
-		font-size: 48px;
-		line-height: 56px;
+		font-size: 3.8rem;
+		line-height: 4.6rem;
 
-		@include breakpoint($to: mobile) {
-			font-size: 38px;
-			line-height: 46px;
+		@include Tablet {
+			font-size: 4.8rem;
+			line-height: 5.6rem;
         }
 	}
 
 
 	&__form {
 		position: relative;
-		display: grid;
+		display: block;
 		-webkit-box-align: center;
 		-webkit-align-items: center;
 		-ms-flex-align: center;
 		align-items: center;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 32px;
-		padding: 35px 0;
+		grid-gap: 3.2rem;
+		padding: 3.5rem 0;
 
-		@include breakpoint($to: mobile) {
-			display: block;
+		@include Tablet {
+			display: grid;
         }
 
 		&-field {
-
-			@include breakpoint($to: mobile) {
-				margin-bottom: 30px;
+			margin-bottom: 3rem;
+			@include Tablet {
+				margin-bottom: 0;
 			}
 		}
 
 
 		/* general options for all forms */
 		input:not([type="submit"]), select, textarea {
-			border: 1px solid rgba(#0B0B0B, 0.15);
-			border-radius: 200px;
+			border: 0.1rem solid rgba(#0B0B0B, 0.15);
+			border-radius: 20rem;
 			color: rgba(#0B0B0B, 0.6);
 			width: 100%;
-			font-size: 16px;
-			line-height: 24px;
-			padding: 16px 24px;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			padding: 1.6rem 2.4rem;
 
 			&:focus {
 				outline: none;
@@ -73,7 +73,7 @@
 		}
 
 		&-submit {
-			max-width: 80px;
+			max-width: 8rem;
 			width: 100%;
 			grid-column-end: -1;
 			justify-self: end;
@@ -89,9 +89,9 @@
 					transition: bottom .3s linear .3s,transform .3s linear;
 					transition: bottom .3s linear .3s,transform .3s linear,-webkit-transform .3s linear;
 					background-color: rgba(#0B0B0B, 0.6);
-					height: 2px;
+					height: 0.2rem;
 					top: 50%;
-					width: 9px;
+					width: 0.9rem;
 					content: "";
 					display: block;
 					position: absolute;
@@ -101,13 +101,13 @@
 				&:after {
 				    -webkit-transform: rotate(135deg);
 					transform: rotate(135deg);
-					right: 25px;
+					right: 2.5rem;
 				}
 
 				&:before {
 					-webkit-transform: rotate(45deg);
 					transform: rotate(45deg);
-					right: 31px;
+					right: 3.1rem;
 				}
 		}
 
@@ -116,8 +116,8 @@
 			grid-column-end: 3;
 
 			textarea {
-				border-radius: 16px;
-				min-height: 200px;
+				border-radius: 1.6rem;
+				min-height: 20rem;
 
 				&::placeholder {
 					color: rgba(#0B0B0B, 0.3);

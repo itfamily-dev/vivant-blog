@@ -4,8 +4,8 @@
     .post-item__image {
 
         img {
-            @media (max-width: 480px) {
-                height: 256px;
+            @media (max-width: 48rem) {
+                height: 25.6rem;
                 object-fit: cover;
             }
         }
@@ -27,18 +27,18 @@
     }
 
     &__link {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
         text-decoration: underline;
         color: #0B0B0B;
         white-space: nowrap;
         opacity: 0.6;
         text-transform: capitalize;
-        margin-right: $component_margin*2;
+        margin-right: 0;
+        margin-left: $component_margin;
 
-        @include breakpoint($to: small) {
-            margin-right: 0;
-            margin-left: $component_margin
+        @include PhoneLandscape {
+            margin-right: $component_margin*2;
         }
     }
 
@@ -48,10 +48,10 @@
         cursor: pointer;
         position: static;
         background: rgba(11, 11, 11, 0.05);
-        border: 1px solid #fff;
-        width: 32px;
-        height: 32px;
-        border-radius: 8px;
+        border: 0.1rem solid #fff;
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 0.8rem;
         margin-top: 0;
         transform: none;
         z-index: 500;
@@ -60,28 +60,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        display: none;
 
-        @include breakpoint($to: small) {
-            right: auto;
-            left: 24px;
-        }
-
-
-        @include breakpoint($to: small) {
-            display: none;
+        @include Tablet {
+            display: flex;
         }
 
         &:after {
-            font-size: 14px;
+            font-size: 1.4rem;
             color: rgba(11, 11, 11, 1);
             position: relative;
             font-weight: bold;
-            left: -1px;
+            left: -0.1rem;
         }
 
         svg {
-            width: 24px;
-            height: 24px;;
+            width: 2.4rem;
+            height: 2.4rem;
         }
 
         &:hover {
@@ -90,16 +85,17 @@
     }
 
     .post-slider-next {
-        right: 40px;
+        right: auto;
+        left: 8rem;
 
-        @include breakpoint($to: small) {
-            right: auto;
-            left: 80px;
+        @include PhoneLandscape {
+            right: 4rem;
+            left: auto;
         }
 
         &:after {
             left: auto;
-            right: -2px;
+            right: -0.2rem;
         }
     }
 }

@@ -9,11 +9,11 @@
         bottom: 0;
         left: 0;
         background: rgba(0,0,0,0.4);
-        border-radius: 16px;
+        border-radius: 1.6rem;
         z-index: 10;;
 
         @include Tablet {
-            border-radius: 32px;
+            border-radius: 3.2rem;
         }
     }
 

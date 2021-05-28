@@ -12,40 +12,40 @@ button,
 	cursor: pointer;
 	display: inline-block;
 	margin-bottom: 0;
-	margin-right: 4px;
+	margin-right: 0.4rem;
 	font-weight: normal;
 	text-align: center;
 	vertical-align: middle;
 	touch-action: manipulation;
 	background-image: none;
-	border: 1px solid transparent;
+	border: 0.1rem solid transparent;
 	white-space: nowrap;
 	font-size: 1rem;
 	padding: $component_margin $component_margin*2;
 	user-select: none;
 	background: #fff;
 	color: #0B0B0B;
-	border: 1px solid #fff;
+	border: 0.1rem solid #fff;
 	box-shadow: none;
 	transition: get_transition( 'ease-in-out-quad' );
-	border-radius: 200px;
+	border-radius: 20rem;
 	font-weight: 200;
 
 	&:hover,
 	&:focus {
 		background: rgba(255, 255, 255, 0.8);
-		border: 1px solid rgba(255, 255, 255, 0.8);
+		border: 0.1rem solid rgba(255, 255, 255, 0.8);
 		color: #0B0B0B;
 	}
 
 	&:active {
 		background: rgba(255, 255, 255, 0.6);
-		border: 1px solid rgba(255, 255, 255, 0.6);
+		border: 0.1rem solid rgba(255, 255, 255, 0.6);
 		color: #0B0B0B;
 	}
 
 	&:last-child {
-		margin-right: 0px;
+		margin-right: 0rem;
 	}
 }
 
@@ -53,21 +53,21 @@ button,
 	text-transform: capitalize;
 	span {
 		display: inline-block;
-		margin-right: 6px;
+		margin-right: 0.6rem;
 
 		&:last-child {
-		margin-right: 0px;
+		margin-right: 0rem;
 		}
 	}
 
 	&__icon {
-		margin-right: 6px;
-		width: 16px;
-		height: 16px;
+		margin-right: 0.6rem;
+		width: 1.6rem;
+		height: 1.6rem;
 		vertical-align: text-top;
 
 		&:last-child {
-			margin-right: 0px;
+			margin-right: 0rem;
 		}
 	}
 
@@ -93,51 +93,51 @@ button,
 		background-color: #1B1B1B;
 		border-color: #1B1B1B;
 		color: #fff;
-		border-radius: 200px;
+		border-radius: 20rem;
 
 		&:hover,
 		&:focus {
 			background: rgba(11, 11, 11, 0.6);
-			border: 1px solid rgba(11, 11, 11, 0.6);
+			border: 0.1rem solid rgba(11, 11, 11, 0.6);
 			color: #fff;
 		}
 
 		&:active {
 			background: rgba(11, 11, 11, 1);
-			border: 1px solid rgba(11, 11, 11, 1);
-			border: 1px solid rgba(11, 11, 11, 1);
+			border: 0.1rem solid rgba(11, 11, 11, 1);
+			border: 0.1rem solid rgba(11, 11, 11, 1);
 		}
 	}
 
 	&--small {
-		padding: $component_margin/2 24px;
-		font-size: 14px;
-		min-width: 80px;
+		padding: $component_margin/2 2.4rem;
+		font-size: 1.4rem;
+		min-width: 8rem;
 		text-align: center;
 	}
 
 	&--large {
-		padding: 26px 48px;
-		font-size:18px;
-		line-height: 28px;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		padding: $component_margin $component_margin*2;
 
-		@include breakpoint($to: desktop) {
-			font-size: 16px;
-			line-height: 24px;
-			padding: $component_margin $component_margin*2
+		@include desktop-sm {
+			padding: 2.6rem 4.8rem;
+			font-size:1.8rem;
+			line-height: 2.8rem;
 		}
 	}
 
 	&--border {
-		border: 1px solid rgba(0, 0, 0, 0.24);
-		padding: 23px 32px;
-		font-size: 16px;
-		line-height: 24px;
+		border: 0.1rem solid rgba(0, 0, 0, 0.24);
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		padding: $component_margin $component_margin*2
 
 		&:hover,
 		&:active {
 			color: #ECBE71;
-			border: 1px solid #ECBE71;
+			border: 0.1rem solid #ECBE71;
 
 			svg {
 				transition: get_transition( 'ease-in-out-quad' );
@@ -145,28 +145,28 @@ button,
 			}
 		}
 
-		@include breakpoint($to: desktop) {
-			font-size: 14px;
-			line-height: 22px;
-			padding: $component_margin $component_margin*2
+		@include desktop-sm {
+			padding: 2.3rem 3.2rem;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
 		}
 	}
 
 	&--smaller {
-		padding: 10px 24px;
-		line-height: 20px;
-		min-width: 80px;
-		font-size: 14px;
+		padding: 1rem 2.4rem;
+		line-height: 2rem;
+		min-width: 8rem;
+		font-size: 1.4rem;
 		text-align: center;
 	}
 
 	&--submit {
 		color: white;
-		border-radius: 200px;
+		border-radius: 20rem;
 		background-color: #0B0B0B;
-		font-size: 14px;
-		line-height: 20px;
-		padding: 10px;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		padding: 1rem;
 
 		&:focus {
 			outline: none;

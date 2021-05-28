@@ -3,23 +3,7 @@
 * Variables
 *
 **/
-
-/**
-*
-* Breakpoints
-* usage : @include breakpoint(desktop);
-**/
-$grid_spacing: 15px;
-
-$breakpoints: (
-    small: 440px,
-    mobile: 640px,
-    tablet: 768px,
-    tablet-large: 840px,
-    desktop: 1024px,
-    large: 1294px,
-    extra-large: 1921px,
-) !default;
+$grid_spacing: 1.5rem;
 
 /**
  * Colors
@@ -38,8 +22,8 @@ $colors: (
 );
 
 $font_family: 'Avenir', Helvetica, Arial, sans-serif;
-$font_size: 18px;
-$font_body: 400 18px/28px $font_family;
+$font_size: 1.8rem;
+$font_body: 400 1.8rem/2.8rem $font_family;
 
 $headings: (
 	"h1": 2.66rem,
@@ -63,11 +47,11 @@ $mobile_headings: (
 *
 **/
 
-$grid_content: 1200px; //wrapper
+$grid_content: 120rem; //wrapper
 $grid_content_narrow: $grid_content * .8;
-$grid_margin: 20px;
-$grid_padding: 15px;
-$component_margin: 16px;
+$grid_margin: 2rem;
+$grid_padding: 1.5rem;
+$component_margin: 1.6rem;
 
 /** Links **/
 $color_link: #0b0b0b;

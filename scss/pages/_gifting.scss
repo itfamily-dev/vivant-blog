@@ -2,42 +2,44 @@
     background: #171717;
 
     .gifting-intro {
-        padding-bottom: 80px;
+        padding-bottom: 8rem;
 
         img {
             margin: $component_margin*2 0 $component_margin*4;
             display: block;
-            border-radius: 16px;
+            border-radius: 1.6rem;
             height: auto;
             width: 100%;
-            height: 480px;
             object-fit: cover;
+            height: 18.4rem;
+            height: 30rem;
+            object-fit: none;
+            margin-bottom: $component_margin*1.5;
 
             @include Tablet {
-                border-radius: 32px;
+                border-radius: 3.2rem;
             }
 
-            @include breakpoint($to: desktop) {
-                height: 300px;
-                object-fit: none;
-                margin-bottom: $component_margin*1.5;
+            @include PhoneLandscape {
+                height: 48rem;
             }
 
-            @include breakpoint($to: small) {
-                height: 184px
+            @include desktop-sm {
+                height: auto;
             }
+
         }
     }
 
     .gifting-block {
-        padding: 40px 0;
-        @include breakpoint(tablet) {
-            padding: 80px 0;
+        padding: 4rem 0;
+        @include Tablet {
+            padding: 8rem 0;
         }
-        border-top: 1px solid rgba(#fff,0.1);
+        border-top: 0.1rem solid rgba(#fff,0.1);
 
         &__image {
-            margin-bottom: 24px;
+            margin-bottom: 2.4rem;
 
             img {
                 height: auto;
@@ -46,14 +48,14 @@
 
             &--medium {
                 img {
-                    max-width: 510px;
+                    max-width: 51rem;
                 }
             }
 
             &--small {
 
                 img {
-                    width: 90px;
+                    width: 9rem;
                 }
             }
         }

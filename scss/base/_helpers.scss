@@ -69,7 +69,7 @@
 .img {
 
     &--rounded {
-        border-radius: 16px;
+        border-radius: 1.6rem;
         width: 100%;
         display: block;
         margin-left: auto;
@@ -79,14 +79,14 @@
         margin-bottom: $component_margin*1.5;
 
         @include Tablet {
-            border-radius: 32px;
+            border-radius: 3.2rem;
         }
 
-        @include breakpoint(small) {
+        @include PhoneLandscape {
             margin-bottom: $component_margin*2;
         }
 
-        @include breakpoint(desktop) {
+        @include desktop-sm {
             margin-bottom: $component_margin*4;
         }
 
@@ -100,23 +100,23 @@
         margin-right: auto;
         margin-bottom: $component_margin*1.5;
 
-        @include breakpoint(small) {
+        @include PhoneLandscape {
             margin-bottom: $component_margin*2;
         }
 
-        @include breakpoint(desktop) {
+        @include desktop-sm {
             margin-bottom: $component_margin*4;
         }
     }
 }
 
 .no-margin {
-	margin-right: 0px;
-	margin-left: 0px;
+	margin-right: 0rem;
+	margin-left: 0rem;
 }
 
 .no-padding {
-    padding: 0px;
+    padding: 0rem;
 }
 
 .overflow-hidden {
@@ -128,21 +128,21 @@
 }
 
 .wrap-900 {
-    max-width: 936px;
+    max-width: 93.6rem;
     margin-left: auto;
     margin-right: auto;
 }
 
 .wrap-content {
 
-    @include breakpoint(desktop) {
-        max-width: 928px;
+    @include desktop-sm {
+        max-width: 92.8rem;
     }
 }
 .wrap-content-smaller {
 
-    @include breakpoint(desktop) {
-        max-width: 903px;
+    @include desktop-sm {
+        max-width: 90.3rem;
     }
 }
 
@@ -159,14 +159,14 @@
         margin-top: $component_margin*3;
     }
     &-4 {
-        margin-top: $component_margin*4;
+        margin-top: $component_margin*1.5;
 
-        @include breakpoint($to: desktop) {
+        @include Tablet {
             margin-top: $component_margin*2;
         }
 
-        @include breakpoint($to: mobile) {
-            margin-top: $component_margin*1.5;
+        @include desktop-sm {
+            margin-top: $component_margin*4;
         }
     }
 }
@@ -184,23 +184,23 @@
         margin-bottom: $component_margin*3;
     }
     &-4 {
-        margin-bottom: $component_margin*4;
+        margin-bottom: $component_margin*1.5;
 
-        @include breakpoint($to: desktop) {
+        @include Tablet {
             margin-bottom: $component_margin*2;
         }
-
-        @include breakpoint($to: mobile) {
-            margin-bottom: $component_margin*1.5;
+        @include desktop-sm {
+            margin-bottom: $component_margin*4;
         }
+
     }
 }
 
 .block-spacing {
-    padding-top: 40px;
+    padding-top: 4rem;
 
-    @include breakpoint(desktop) {
-        padding-top: 80px;
+    @include desktop-sm {
+        padding-top: 8rem;
     }
 }
 
@@ -217,11 +217,11 @@
 }
 
 .custom-list {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
 
-    @include breakpoint(desktop) {
-        font-size: 24px;
-        line-height: 36px;
+    @include desktop-sm {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
     }
 }

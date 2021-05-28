@@ -3,20 +3,20 @@
     .our-story {
 
         &__intro-left {
-            @include breakpoint(desktop) {
-                padding-right: 25px;
+            @include desktop-sm {
+                padding-right: 2.5rem;
             }
         }
 
         &__intro-right {
-            @include breakpoint(desktop) {
-                padding-left: 25px;
+            @include desktop-sm {
+                padding-left: 2.5rem;
             }
         }
 
         &--mission {
             position: relative;
-            padding-bottom: 80px;
+            padding-bottom: 8rem;
             .wrapper {
                     position: relative;
                     z-index: 10;
@@ -32,7 +32,7 @@
                 background-color: #0B0B0B;
                 z-index: 1;
 
-                @include breakpoint(large) {
+                @include desktop-md {
                     top: 32%;
                 }
             }
@@ -42,43 +42,46 @@
 
             .values {
                 display: flex;
-                padding: $component_margin*4 0 80px;
+                padding-top: $component_margin*1.5;
                 justify-content: space-between;
 
-                @include breakpoint($to: desktop) {
+                @include Tablet {
                     padding-top: $component_margin*2;
-                    padding-bottom: 40px;
+                    padding-bottom: 4rem;
                 }
 
-                @include breakpoint($to: tablet) {
-                    padding-top: $component_margin*1.5;
+                @include desktop-sm {
+                    padding: $component_margin*4 0 8rem;
                 }
+
 
                 &__image {
-                    flex: 1 1 calc(50% - 48px);
-                    max-width: calc(50% - 48px) ;
+                    flex: 1 1 calc(50% - 4.8rem);
+                    max-width: calc(50% - 4.8rem) ;
+                    display: none;
 
-                    @include breakpoint($to: desktop) {
-                        display: none
+                    @include desktop-sm {
+                        display: block;
                     }
 
                     img {
                         height: auto;
                         margin: 0;
-                        height: 706px;
+                        height: 70.6rem;
                         object-fit: cover;
                         width: 100%;
                     }
                 }
 
                 &__content {
-                    flex: 1 1 calc(50% - 48px);
-                    max-width: calc(50% - 48px) ;
+                    flex: 100%;
+                    max-width: 50.8rem;
+                    margin: 0 auto;
+                    max-width: none;
 
-                    @include breakpoint($to: desktop) {
-                       flex: 100%;
-                       max-width: 508px;
-                       margin: 0 auto;
+                    @include desktop-sm {
+                        flex: 1 1 calc(50% - 4.8rem);
+                        max-width: calc(50% - 4.8rem);
                     }
 
                     &-slider {
@@ -108,7 +111,7 @@
                         &-description {
                             display: none;
                             padding-top: $component_margin;
-                            border-top: 1px solid rgba(#0B0B0B, 0.2);
+                            border-top: 0.1rem solid rgba(#0B0B0B, 0.2);
 
                             &:hover {
                                 opacity: 1;
@@ -125,21 +128,22 @@
             .wrap-content {
                 margin-top: -15vw;
 
-                @include breakpoint(large) {
-                    margin-top: -250px;
+                @include desktop-md {
+                    margin-top: -25rem;
                 }
             }
 
             .mb-3 {
+                margin-bottom: $component_margin*1.5;
 
-                @include breakpoint($to: desktop) {
-                    margin-bottom: $component_margin*1.5;
+                @include desktop-sm {
+                    margin-bottom: $component_margin*3;
                 }
             }
 
             p {
 
-                @include breakpoint(desktop) {
+                @include desktop-sm {
 
                     &:not(:last-child) {
                         margin-bottom: $component_margin*3;
@@ -166,11 +170,11 @@
                     }
                 }
 
-                @include breakpoint($to: mobile) {
-
-                    h2,p,.big-p {
-                        text-align: left;
-                    }
+                h2,p,.big-p {
+                    text-align: left;
+                }
+                @include Tablet {
+                    text-align: center;
                 }
             }
 
@@ -184,7 +188,7 @@
                 background-color: #0B0B0B;
                 z-index: 1;
 
-                @include breakpoint(large) {
+                @include desktop-md {
                     height: 25%;
                 }
             }
@@ -195,7 +199,7 @@
 
             &-logo {
                 display: block;
-                width: 400px;
+                width: 40rem;
                 max-width: 60%;
                 margin: 0 auto $component_margin *2;
             }

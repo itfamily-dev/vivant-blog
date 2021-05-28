@@ -1,48 +1,42 @@
 /*!
 Theme Name: AM2 Theme
-Theme URI:
-Author: AM2 Studio
-Author URI: http://am2studio.hr/
-Description: AM2 Admin Starter Theme.
-Version: 2.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Author: IT Family Klaudio Milankovic
+Author URI: https://itfamily.dev/
 !*/
 
 /* Variables & Mixins. */
 @import 'abstracts/variables';
-@import 'abstracts/tools';
+@import 'abstracts/responsive';
 
 /* Reset. */
 @import 'vendor/normalize';
 
 /* Styleguide. */
-@import 'pages/styleguide';
 @import 'pages/blog';
-@import 'pages/single';
-@import 'pages/gifting';
-@import 'pages/meet-the-team';
-@import 'pages/join-us';
-@import 'pages/our-story';
-@import 'pages/for-wine';
-@import 'pages/help';
-@import 'pages/single-help';
 @import 'pages/contact';
+@import 'pages/for-wine';
+@import 'pages/gifting';
+@import 'pages/help';
+@import 'pages/join-us';
+@import 'pages/meet-the-team';
+@import 'pages/our-story';
+@import 'pages/single';
+@import 'pages/single-help';
 
 /* Base. */
 @import 'base/index';
 
 /* Components. */
-@import 'components/global';
 @import 'components/buttons';
 @import 'components/card';
-@import 'components/post-item';
-@import 'components/social-share';
+@import 'components/global';
 @import 'components/image';
 @import 'components/image-banner';
 @import 'components/post-slider';
-@import 'components/small-card';
 @import 'components/search-form';
+@import 'components/social-share';
+@import 'components/small-card';
+@import 'components/post-item';
 
 /* Vendor. */
 @import 'vendor/micromodal';

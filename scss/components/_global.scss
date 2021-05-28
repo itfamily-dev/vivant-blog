@@ -3,11 +3,11 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	margin: 50px 0;
+	margin: 5rem 0;
 
 	&.has-background {
 		margin: 0;
-		padding: 50px 0;
+		padding: 5rem 0;
 	}
 }
 
@@ -15,10 +15,10 @@
     padding: $component_margin*1.5 0;
 
     @include Tablet {
-        padding: 40px 0;
+        padding: 4rem 0;
     }
 
-    @include breakpoint(desktop) {
+    @include desktop-sm {
         padding: $component_margin*4 0;
     }
 
@@ -35,18 +35,18 @@
         }
 
         p {
-            margin-bottom: 48px;
-            @include breakpoint($to: desktop) {
-                margin-bottom: 24px;
+            margin-bottom: 2.4rem;
+            @include desktop-sm {
+                margin-bottom: 4.8rem;
             }
         }
     }
 
     &.help {
 
-        @include breakpoint(desktop) {
-            padding-top: 80px;
-            padding-bottom: 80px;
+        @include desktop-sm {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
         }
     }
 

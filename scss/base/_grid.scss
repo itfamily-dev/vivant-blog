@@ -1,35 +1,34 @@
-.wp-block-group__inner-container,
 .wrapper {
 	width: 100%;
-	max-width: 1280px;
+	max-width: 128rem;
 	margin: 0 auto;
-	padding-right: 24px;
-	padding-left: 24px;
+	padding-right: 2.4rem;
+	padding-left: 2.4rem;
 
 	@include Tablet {
-		padding-right: 40px;
-		padding-left: 40px;
+		padding-right: 4rem;
+		padding-left: 4rem;
 	}
 
-	@include breakpoint(desktop) {
-		padding-left: 80px;
-		padding-right: 80px;
+	@include desktop-sm {
+		padding-left: 8rem;
+		padding-right: 8rem;
 	}
 
 	&--full {
-		max-width: 1760px;
+		max-width: 176rem;
 	}
 
 	&--contact {
-		max-width: 894px;
+		max-width: 89.4rem;
 	}
 
 	&--large {
-		max-width: 1472px;
+		max-width: 147.2rem;
 	}
 
 	&--large-v1 {
-		max-width: 1244px;
+		max-width: 124.4rem;
 	}
 
 	&--narrow {
@@ -37,14 +36,14 @@
 	}
 
 	&--narrow-v1 {
-		max-width: 890px;
+		max-width: 89rem;
 	}
 	&--content {
-		max-width: 1088px;
+		max-width: 108.8rem;
 	}
 
 	&--narrower {
-		max-width: 890px;
+		max-width: 89rem;
 	}
 
 	.wrapper & {
@@ -68,15 +67,25 @@
 		margin-right: - $grid_spacing;
 	}
 
-	@each $breakpoint, $size in $breakpoints {
-		&--break-#{$breakpoint} {
+	&--break-mobile {
+		@media (max-width: 640px) {
+			flex-direction: column;
 
-		@include breakpoint($to: #{$breakpoint}) {
-				flex-direction: column;
+			>.col {
+				width: 100%;
+				flex: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+	&--break-small {
+		@media (max-width: 440px) {
+			flex-direction: column;
 
-				> .col {
-					max-width: 100%;
-				}
+			>.col {
+				width: 100%;
+				flex: 100%;
+				max-width: 100%;
 			}
 		}
 	}

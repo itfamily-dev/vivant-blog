@@ -4,11 +4,11 @@
     .content {
         padding-top: $component_margin*1.5;
 
-        @include breakpoint(small) {
-            padding-top: 40px;
+        @include PhoneLandscape {
+            padding-top: 4rem;
         }
 
-        @include breakpoint(desktop) {
+        @include desktop-sm {
             padding-top: $component_margin*4
         }
     }
@@ -37,7 +37,7 @@
         &--why,
         &--how {
             position: relative;
-            padding-bottom: 80px;
+            padding-bottom: 8rem;
 
             .wrapper {
                 position: relative;
@@ -54,7 +54,7 @@
                 background-color: #0B0B0B;
                 z-index: 1;
 
-                @include breakpoint(large) {
+                @include desktop-md {
                     top: 25%;
                 }
             }
@@ -70,7 +70,7 @@
 
                 p {
 
-                    @include breakpoint(desktop) {
+                    @include desktop-sm {
                         margin-bottom: $component_margin*2.5;
                     }
                 }
@@ -85,7 +85,7 @@
                     background-color: #0B0B0B;
                     z-index: 1;
 
-                    @include breakpoint(large) {
+                    @include desktop-md {
                        height: 32%;
                     }
                 }
@@ -94,9 +94,12 @@
         &--how,
         &--why {
 
-            @include breakpoint(mobile,desktop) {
-                h2,.big-p,.custom-list,.ctas__item {
-                    padding-left: 88px;
+            h2,.big-p,.custom-list,.ctas__item {
+                @include Tablet {
+                    padding-left: 8.8rem;
+                }
+                @include desktop-sm {
+                    padding-left: 0;
                 }
             }
         }
