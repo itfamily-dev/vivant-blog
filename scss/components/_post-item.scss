@@ -1,5 +1,10 @@
 .post-item {
 
+    @include Tablet {
+        max-width: 100%;
+    }
+
+
     &__image {
         margin: 0 0 $component_margin*1.33;
 
@@ -243,6 +248,7 @@
         @include Tablet {
             width: 54.4rem;
             height: 36rem;
+            max-width: 100%;
         }
 
         .post-item__image {

@@ -84,10 +84,7 @@
         font-size: 1.8rem;
         line-height: 2.8rem;
 
-        @include Tablet {
-            font-size: 2.4rem;
-            line-height: 3.6rem;
-        }
+
 
         h2 {
             font-size: 2.4rem;
@@ -268,6 +265,10 @@
                 display: none;
             }
 
+            @include desktop-sm {
+                margin-right: 0;
+            }
+
             .col.col-6 {
                 flex: 25.6rem;
                 min-width: 25.6rem;
@@ -278,16 +279,22 @@
                     flex: 54.4rem;
                     min-width: 54.4rem;
                     height: 39rem;
+                    margin-right: 0;
+                }
+
+                @include desktop-sm {
+                    flex: 50%;
+                    min-width: 0;
                 }
             }
         }
+        margin-right: -$grid_spacing;;
 
         @include desktop-sm {
-            margin-right: -$grid_spacing;;
-
+            margin-right: 0;
             .col.col-6 {
                 flex: 50%;
-                min-width: none;
+                min-width: 0;
                 height: auto;
                 margin-right: 0;
             }
@@ -382,6 +389,7 @@
         @include desktop-sm {
             margin-top: 12rem;
             margin-bottom: 9.6rem;
+            overflow: hidden;
         }
 
         &__title {
@@ -509,6 +517,10 @@
             &::-webkit-scrollbar {
                 display: none;
             }
+
+            @include desktop-sm {
+                margin-right: 0;
+            }
         }
 
         .col-4 {
@@ -521,6 +533,7 @@
                 flex: 54.4rem;
                 min-width: 54.4rem;
                 height: 39rem;
+                margin-right: 0;
             }
         }
 
@@ -532,8 +545,9 @@
                 display: none;
             }
             @include desktop-sm {
-                flex: calc((4 / 12) * 100%);
-                max-width: calc((4 / 12) * 100%);
+                flex: calc((6 / 12) * 100%);
+                max-width: calc((6 / 12) * 100%);
+                min-width: 0;
             }
         }
     }
