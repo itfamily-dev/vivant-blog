@@ -5,8 +5,8 @@ Author URI: https://itfamily.dev/
 !*/
 
 /* Variables & Mixins. */
-@import 'abstracts/variables';
 @import 'abstracts/responsive';
+@import 'abstracts/variables';
 
 /* Reset. */
 @import 'vendor/normalize';

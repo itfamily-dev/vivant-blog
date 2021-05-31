@@ -26,20 +26,31 @@ $font_size: 1.8rem;
 $font_body: 400 1.8rem/2.8rem $font_family;
 
 $headings: (
-	"h1": 4.77rem,
+	"h1": 4.8rem,
 	"h2": 3.6rem,
 	"h3": 2.4rem,
 	"h4": 1.3rem,
-	"h5": 1.4rem,
+	"h5": 1.1rem,
 	"h6": 1.2rem,
 )!default;
 
 $mobile_headings: (
 	"h1": 3.6rem,
 	"h2": 2.4rem,
-	"h3": 1.3rem,
-	"h4": 1.1rem,
+	"h3": 1.8rem,
+	"h4": 1.2rem,
+	"h5": 1rem,
 )!default;
+
+p {
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	@include Tablet {
+		font-size: 1.8rem;
+		line-height: 2.8rem;
+	}
+}
 
 /**
 *
