@@ -42,16 +42,6 @@ $mobile_headings: (
 	"h5": 1rem,
 )!default;
 
-p {
-	font-weight: 400;
-	font-size: 1.6rem;
-	line-height: 2.4rem;
-	@include Tablet {
-		font-size: 1.8rem;
-		line-height: 2.8rem;
-	}
-}
-
 /**
 *
 * Grid
