@@ -41,7 +41,8 @@
         &--values {
 
             .values {
-                display: flex;
+                display: block;
+                grid-template-columns: 1fr 1fr;
                 padding-top: $component_margin*1.5;
                 justify-content: space-between;
                 gap: 90px;
@@ -49,17 +50,15 @@
 
                 @include Tablet {
                     padding-top: $component_margin*2;
-                    padding-bottom: 0;
                 }
 
                 @include desktop-sm {
+                    display: grid;
                     padding: $component_margin*4 0 8rem;
                 }
 
 
                 &__image {
-                    flex: 1 1 calc(50% - 4.8rem);
-                    max-width: calc(50% - 4.8rem) ;
                     display: none;
 
                     @include desktop-sm {
@@ -77,14 +76,8 @@
 
                 &__content {
                     flex: 100%;
-                    max-width: 50.8rem;
                     margin: 0 auto;
-                    max-width: none;
-
-                    @include desktop-sm {
-                        flex: 1 1 calc(50% - 4.8rem);
-                        max-width: calc(50% - 4.8rem);
-                    }
+                    max-width: 508px;
 
                     &-slider {
                         list-style: none;
