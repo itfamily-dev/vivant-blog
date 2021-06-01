@@ -9,7 +9,7 @@
         .blog-hero {
             padding-top: $component_margin*2;
 
-            @include PhoneLandscape {
+            @include Tablet {
                 padding-top: $component_margin*4;
             }
         }
@@ -327,7 +327,7 @@
                 font-size: 2.4rem;
                 line-height: 1;
 
-                @include PhoneLandscape {
+                @include Tablet {
                     margin-bottom: $component_margin/4;
                 }
             }
@@ -364,7 +364,7 @@
                         opacity: 1;
                     }
 
-                    @include PhoneLandscape {
+                    @include Tablet {
                         width: 1.8rem;
                         height: 1.8rem;
                     }

@@ -23,7 +23,7 @@
                 height: 28rem;
                 object-fit: cover;
 
-                @include PhoneLandscape {
+                @include Tablet {
                     height: 44rem;
                     object-fit: cover;
                 }
@@ -102,7 +102,7 @@
                 transform: translate3d(0,0,0);
             }
 
-            @include PhoneLandscape {
+            @include Tablet {
                 display: -webkit-box;
             }
         }

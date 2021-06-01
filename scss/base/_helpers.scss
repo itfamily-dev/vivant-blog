@@ -82,7 +82,7 @@
             border-radius: 3.2rem;
         }
 
-        @include PhoneLandscape {
+        @include Tablet {
             margin-bottom: $component_margin*2;
         }
 
@@ -100,7 +100,7 @@
         margin-right: auto;
         margin-bottom: $component_margin*1.5;
 
-        @include PhoneLandscape {
+        @include Tablet {
             margin-bottom: $component_margin*2;
         }
 

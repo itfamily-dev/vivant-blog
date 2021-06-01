@@ -39,7 +39,7 @@
         margin-right: 0;
         margin-left: $component_margin;
 
-        @include PhoneLandscape {
+        @include Tablet {
             margin-right: $component_margin*2;
         }
     }
@@ -90,7 +90,7 @@
         right: auto;
         left: 8rem;
 
-        @include PhoneLandscape {
+        @include Tablet {
             right: 4rem;
             left: auto;
         }

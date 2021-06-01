@@ -20,7 +20,7 @@
                 border-radius: 3.2rem;
             }
 
-            @include PhoneLandscape {
+            @include Tablet {
                 height: 48rem;
             }
 
