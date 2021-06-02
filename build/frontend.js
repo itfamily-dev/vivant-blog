@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       items: 1,
       mouseDrag: true,
       slideBy: 1,
-      gutter: 33,
+      gutter: 16,
       controlsContainer: ".post-slider__navigation",
       prevButton: ".post-slider-prev",
       nextButton: ".post-slider-next",
@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
       responsive: {
         480: {
           items: 2,
-          fixedWidth: false
+          fixedWidth: false,
+          gutter: 33
         },
         1024: {
           items: 3
