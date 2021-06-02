@@ -15,6 +15,8 @@
                     width: 50%;
                     flex: 50%;
                     max-width: 50%;
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
                 }
                 @include desktop-sm {
                     width: 33.33%;
@@ -103,10 +105,13 @@
                     background: rgba(#fff,0.2);
                     border-radius: 2rem;
                     text-transform: uppercase;
-                    max-width: 8rem;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
+
+                    @include Tablet {
+                        max-width: 8rem;
+                    }
 
                     @include desktop-sm {
                         max-width: none;
