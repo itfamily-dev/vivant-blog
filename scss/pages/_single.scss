@@ -258,15 +258,15 @@
         .columns {
             flex-wrap: nowrap;
             overflow-x: auto;
-            margin-right: calc(-50vw + 50%);
+            margin-right: -2.4rem;
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
             &::-webkit-scrollbar {
                 display: none;
             }
 
-            @include desktop-sm {
-                margin-right: 0;
+            @include Tablet {
+                margin-right: -1.5rem;
             }
 
             .col.col-6 {
@@ -276,8 +276,6 @@
                 margin-right: 1.6rem;
 
                 @include Tablet {
-                    flex: 54.4rem;
-                    min-width: 54.4rem;
                     height: 39rem;
                     margin-right: 0;
                 }
@@ -288,7 +286,6 @@
                 }
             }
         }
-        margin-right: -$grid_spacing;;
 
         @include desktop-sm {
             margin-right: 0;
@@ -433,7 +430,7 @@
             }
 
             @include Tablet {
-                width: 54.4rem;
+                width: 100%;
                 height: 36rem;
             }
 
@@ -457,7 +454,6 @@
 
                     @include desktop-sm {
                         object-fit: cover;
-                        height: 36rem;
                     }
                 }
             }
@@ -511,15 +507,15 @@
         .columns {
             flex-wrap: nowrap;
             overflow-x: auto;
-            margin-right: calc(-50vw + 50%);
+            margin-right: -2.4rem;
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
             &::-webkit-scrollbar {
                 display: none;
             }
 
-            @include desktop-sm {
-                margin-right: 0;
+            @include Tablet {
+                margin-right: -1.5rem;
             }
         }
 
@@ -530,10 +526,13 @@
             margin-right: 1.6rem;
 
             @include Tablet {
-                flex: 54.4rem;
-                min-width: 54.4rem;
                 height: 39rem;
                 margin-right: 0;
+            }
+
+            @include desktop-sm {
+                flex: calc((6 / 12) * 100%);
+                min-width: 0;
             }
         }
 
