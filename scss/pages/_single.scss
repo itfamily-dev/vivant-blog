@@ -434,12 +434,30 @@
                 height: 36rem;
             }
 
+            @include desktop-sm {
+                height: auto;
+            }
+
             &__excerpt {
                 display: none;
+
+                @include desktop-sm {
+                    display: block;
+                    color: #0B0B0B;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
             }
 
             &__image {
                 margin-bottom: 0;
+
+                @include desktop-sm {
+                    overflow: visible;
+                    margin-bottom: 2.1rem;
+                }
 
                 img {
                     object-fit: cover;
@@ -454,6 +472,8 @@
 
                     @include desktop-sm {
                         object-fit: cover;
+                        width: 100%;
+                        height: auto;;
                     }
                 }
             }
@@ -469,6 +489,10 @@
                 z-index: 1 ;
                 transition: get_transition();
                 border-radius: 2.4rem;
+
+                @include desktop-sm {
+                    display: none;
+                }
             }
 
             &:hover {
@@ -491,6 +515,11 @@
                     left: $component_margin*2;
                     right: $component_margin*2;
                 }
+
+                @include desktop-sm {
+                    position: static;
+                    color: #0B0B0B;
+                }
             }
 
             &__title {
@@ -498,9 +527,10 @@
                 margin-bottom: $component_margin;
 
                 @include desktop-sm {
-                    font-size: 3.6rem;
-                    line-height: 4.4rem;
+                    font-size: 2.4rem;
+                    line-height: 1.2;
                     font-weight: 200;
+                    color: #0B0B0B;
                 }
             }
         }
@@ -528,25 +558,24 @@
             @include Tablet {
                 height: 39rem;
                 margin-right: 0;
+                flex: calc((6 / 12) * 100%);
+                max-width: calc((6/12)*100%);
+                min-width: 0;
+
+                &:last-child {
+                    display: none;
+                }
             }
 
             @include desktop-sm {
-                flex: calc((6 / 12) * 100%);
+                flex: calc((4 / 12) * 100%);
+                max-width: calc((4 / 12) * 100%);
                 min-width: 0;
-            }
-        }
+                height: auto;
 
-        .col-4 {
-            flex: calc((6 / 12) * 100%);
-            max-width: calc((6 / 12) * 100%);
-
-            &:last-child {
-                display: none;
-            }
-            @include desktop-sm {
-                flex: calc((6 / 12) * 100%);
-                max-width: calc((6 / 12) * 100%);
-                min-width: 0;
+                &:last-child {
+                    display: block;
+                }
             }
         }
     }
